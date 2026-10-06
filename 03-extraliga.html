@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TK Slavia Plzeň — tenis od roku 1953</title>
+<meta name="description" content="TK Slavia Plzeň z.s. — tenisový klub s tradicí od roku 1953. 17 antukových dvorců, 6 krytých, Plzeňská regionální tenisová akademie, ligová družstva.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+<style>
+/* ============ 0. ZÁKLAD ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:104px;-webkit-text-size-adjust:100%}
+:root{
+  --w:#FFFFFF;
+  --gray:#F2F4F1;
+  --deep:#14301F;
+  --deep-2:#1B3D28;
+  --green:#1E6B45;
+  --green-d:#175538;
+  --lime:#C8DE4A;
+  --lime-d:#AFC534;
+  --silver:#AEB6BC;
+  --ink:#101713;
+  --muted:#5D6B62;
+  --line:#E3E8E1;
+  --line-d:#2A4A36;
+  --r:14px;
+  --r-s:9px;
+  --shadow:0 18px 44px -26px rgba(16,23,19,.5);
+  --nav-h:66px;
+}
+body{
+  margin:0;background:var(--w);color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  font-size:16px;line-height:1.65;font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.06;overflow-wrap:break-word}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:4px}
+::selection{background:var(--lime);color:var(--deep)}
+
+.wrap{width:min(1240px,100% - 3rem);margin-inline:auto}
+.disp{
+  font-family:'Archivo','Archivo Expanded',system-ui,sans-serif;
+  font-variation-settings:'wdth' 112;
+  font-weight:800;text-transform:uppercase;letter-spacing:-.015em;
+}
+.mono-num{font-variant-numeric:tabular-nums}
+section{position:relative}
+.sec{padding:clamp(3.4rem,7vw,6.4rem) 0}
+.sec.tight{padding-block:clamp(2.6rem,5vw,4.4rem)}
+
+/* hlavičky sekcí */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.688rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--green);margin-bottom:1rem;
+}
+.eyebrow::before{content:"";width:26px;height:3px;background:var(--lime);border-radius:2px;flex:none}
+.eyebrow.on-dark{color:var(--lime)}
+.eyebrow.on-dark::before{background:var(--lime)}
+h2.title{font-size:clamp(1.5rem,4.4vw,3rem)}
+.sec-head{max-width:56ch;margin-bottom:clamp(1.8rem,3.4vw,3rem)}
+.sec-head p.lead{margin-top:1rem;color:var(--muted);font-size:clamp(.95rem,1.5vw,1.06rem);max-width:60ch}
+.sec-head.on-dark p.lead{color:#B9C8BE}
+.head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+
+/* tlačítka */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:.92rem 1.5rem;border-radius:999px;border:2px solid transparent;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.82rem;
+  letter-spacing:.09em;text-transform:uppercase;cursor:pointer;
+  transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease;
+  line-height:1;text-align:center;white-space:nowrap;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-d)}
+.btn-lime{background:var(--lime);color:var(--deep)}
+.btn-lime:hover{background:var(--lime-d)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-line-l{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-line-l:hover{background:#fff;color:var(--deep)}
+.btn-sm{padding:.7rem 1.1rem;font-size:.72rem}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .marquee__track{animation:none!important}
+}
+
+/* ============ 1. LOGO ============ */
+.logo{display:flex;align-items:center;gap:.7rem;flex:none}
+.logo img{height:50px;width:auto;max-width:none;display:block;object-fit:contain;transition:height .25s}
+.hdr.scrolled .logo img{height:44px}
+/* patička je tmavá — logo dostane světlou podložku */
+.ft-brand{display:inline-flex;align-items:center;background:#F4F6F2;border-radius:14px;padding:7px 12px}
+.ft-brand img{height:66px;width:auto;max-width:none;display:block;object-fit:contain}
+
+/* ============ 2. TOPBAR ============ */
+.topbar{background:var(--deep);color:#CFDAD3;font-size:.75rem;letter-spacing:.02em}
+.topbar .wrap{display:flex;align-items:center;gap:1.4rem;min-height:40px;flex-wrap:wrap;padding-block:.35rem}
+.topbar a{color:#CFDAD3;transition:color .18s}
+.topbar a:hover{color:var(--lime)}
+.tb-i{display:inline-flex;align-items:center;gap:.45rem}
+.tb-i svg{width:13px;height:13px;flex:none;color:var(--lime)}
+.tb-res{color:#fff!important;font-weight:600}
+.tb-res b{color:var(--lime)}
+.topbar .sp{margin-left:auto;display:flex;align-items:center;gap:.35rem}
+.lang{
+  background:none;border:1px solid rgba(255,255,255,.22);color:#CFDAD3;
+  padding:.16rem .5rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;cursor:pointer;
+}
+.lang[aria-pressed="true"]{background:var(--lime);border-color:var(--lime);color:var(--deep)}
+
+/* ============ 3. HLAVIČKA ============ */
+.hdr{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .25s,padding .25s}
+.hdr .wrap{display:flex;align-items:center;gap:1.2rem;min-height:var(--nav-h);transition:min-height .25s}
+.hdr.scrolled{box-shadow:0 10px 30px -22px rgba(16,23,19,.55)}
+.hdr.scrolled .wrap{min-height:58px}
+.nav{display:flex;align-items:center;gap:.15rem;margin-left:auto}
+.nav a{
+  padding:.55rem .72rem;border-radius:8px;font-size:.79rem;font-weight:600;letter-spacing:.04em;
+  text-transform:uppercase;font-family:'Archivo',sans-serif;color:var(--ink);transition:color .16s,background .16s;
+}
+.nav a:hover{color:var(--green);background:var(--gray)}
+.hdr-cta{margin-left:.6rem;flex:none}
+.burger{
+  display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;
+  cursor:pointer;padding:0;place-items:center;margin-left:auto;
+}
+.burger span{display:block;width:19px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
+.burger span+span{margin-top:4px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mnav{
+  position:fixed;inset:0 0 0 auto;width:min(340px,86vw);background:var(--deep);color:#fff;z-index:120;
+  transform:translateX(102%);transition:transform .32s cubic-bezier(.4,0,.2,1);
+  padding:1.4rem 1.4rem 2rem;display:flex;flex-direction:column;gap:.15rem;overflow-y:auto;
+}
+.mnav.open{transform:none}
+.mnav-top{display:flex;justify-content:flex-end;margin-bottom:.6rem}
+.mnav-close{background:none;border:1px solid rgba(255,255,255,.25);color:#fff;width:40px;height:40px;border-radius:10px;font-size:1.2rem;cursor:pointer;line-height:1}
+.mnav a.ml{
+  padding:.85rem .3rem;border-bottom:1px solid var(--line-d);font-family:'Archivo',sans-serif;
+  font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:1rem;color:#fff;
+}
+.mnav a.ml:hover{color:var(--lime)}
+.mnav .btn{margin-top:1.2rem}
+.mnav .m-contact{margin-top:1.4rem;font-size:.82rem;color:#B9C8BE;line-height:1.9}
+.mnav .m-contact a:hover{color:var(--lime)}
+.scrim{position:fixed;inset:0;background:rgba(16,23,19,.5);opacity:0;pointer-events:none;transition:opacity .3s;z-index:110}
+.scrim.on{opacity:1;pointer-events:auto}
+
+/* ============ 4. HERO ============ */
+.hero{position:relative;background:var(--w);padding:clamp(2.4rem,5vw,4.4rem) 0 clamp(2rem,4vw,3.4rem);overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;opacity:.5;
+  -webkit-mask-image:radial-gradient(120% 90% at 78% 20%,#000 0%,transparent 72%);
+  mask-image:radial-gradient(120% 90% at 78% 20%,#000 0%,transparent 72%);
+}
+.hero::after{
+  content:"";position:absolute;right:-10vw;top:-14vw;width:44vw;height:44vw;max-width:640px;max-height:640px;
+  border-radius:50%;background:radial-gradient(circle at 34% 30%,rgba(200,222,74,.5),rgba(200,222,74,0) 66%);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(1.6rem,3.4vw,3.4rem);align-items:end}
+.kicker{
+  display:inline-flex;align-items:center;gap:.6rem;padding:.42rem .85rem;border:1px solid var(--line);border-radius:999px;
+  font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);background:var(--gray);
+}
+.kicker i{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none;
+  box-shadow:0 0 0 0 rgba(200,222,74,.8);animation:pulse 2.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(200,222,74,0)}100%{box-shadow:0 0 0 0 rgba(200,222,74,0)}}
+h1.hero-h{
+  margin:1.2rem 0 0;font-size:clamp(2rem,8.4vw,5.4rem);line-height:1.02;letter-spacing:-.028em;
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 115;font-weight:900;text-transform:uppercase;
+}
+h1.hero-h .ln{display:block}
+h1.hero-h .hl{position:relative;display:inline-block;color:var(--green)}
+h1.hero-h .hl::after{
+  content:"";position:absolute;left:-.04em;right:-.04em;bottom:.07em;height:.24em;background:var(--lime);
+  z-index:-1;border-radius:2px;transform:skewX(-8deg);
+}
+.hero-sub{margin-top:1.5rem;max-width:50ch;color:var(--muted);font-size:clamp(.98rem,1.7vw,1.12rem)}
+.hero-btns{display:flex;gap:.7rem;margin-top:2rem;flex-wrap:wrap}
+.hero-facts{display:flex;gap:1.8rem;margin-top:2.2rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.3rem}
+.hero-facts div b{display:block;font-family:'Archivo',sans-serif;font-weight:900;font-size:1.6rem;line-height:1;color:var(--ink)}
+.hero-facts div span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* rezervační karta */
+.res-card{
+  background:var(--deep);color:#fff;border-radius:20px;padding:clamp(1.4rem,2.4vw,2rem);position:relative;overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.res-card::before{
+  content:"";position:absolute;inset:auto -30% -55% auto;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(200,222,74,.28),transparent 62%);
+}
+.res-card>*{position:relative;z-index:2}
+.res-card .rc-lab{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);font-weight:700}
+.res-card h3{font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.3rem,2.4vw,1.75rem);margin:.7rem 0 .6rem;letter-spacing:-.01em}
+.res-card p{color:#B9C8BE;font-size:.9rem}
+.rc-club{
+  display:flex;align-items:center;gap:.8rem;margin:1.2rem 0;padding:.85rem 1rem;border-radius:12px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+}
+.rc-club b{font-family:'Archivo',sans-serif;font-size:1.8rem;font-weight:900;color:var(--lime);line-height:1}
+.rc-club span{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#B9C8BE}
+.res-card .btn{width:100%}
+.rc-note{margin-top:.9rem;font-size:.75rem;color:#8FA396}
+
+/* ============ 5. MARQUEE ============ */
+.marquee{background:var(--lime);color:var(--deep);padding:.75rem 0;overflow:hidden;border-block:2px solid var(--deep);position:relative}
+.marquee__track{display:flex;width:max-content;animation:slide 26s linear infinite}
+.marquee:hover .marquee__track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.marquee__grp{display:flex;align-items:center;gap:1.6rem;padding-right:1.6rem}
+.marquee span{
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118;font-weight:900;text-transform:uppercase;
+  font-size:clamp(.85rem,2vw,1.25rem);letter-spacing:.05em;white-space:nowrap;
+}
+.marquee i{width:9px;height:9px;background:var(--deep);border-radius:50%;flex:none}
+
+/* ============ 6. STATISTIKY ============ */
+.stats{background:var(--deep);color:#fff;padding:clamp(2.6rem,5vw,4.4rem) 0;position:relative;overflow:hidden}
+.stats::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:100% 46px;
+}
+.stats .wrap{position:relative;z-index:2}
+.stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d);border-radius:16px;overflow:hidden}
+.stat{background:var(--deep);padding:clamp(1.2rem,2.4vw,2rem) clamp(.8rem,1.6vw,1.4rem);transition:background .25s}
+.stat:hover{background:var(--deep-2)}
+.stat b{
+  display:block;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 116;font-weight:900;
+  font-size:clamp(2rem,5.6vw,4rem);line-height:1;letter-spacing:-.03em;
+  background:linear-gradient(160deg,#fff 8%,var(--lime) 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  line-height:1.15;padding-top:.1em;margin-top:-.1em;
+}
+.stat span{display:block;margin-top:.5rem;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:#9FB2A5;line-height:1.5}
+.stat:hover b{filter:brightness(1.08)}
+
+/* ============ 7. TRADICE / OSA ============ */
+.tl-controls{display:flex;gap:.5rem}
+.tl-btn{
+  width:46px;height:46px;border-radius:50%;border:2px solid var(--ink);background:#fff;cursor:pointer;
+  display:grid;place-items:center;transition:background .18s,color .18s,transform .18s;color:var(--ink);
+}
+.tl-btn:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+.tl-btn svg{width:17px;height:17px}
+.tl-rail{position:relative;margin-top:.6rem}
+.tl-rail::before{content:"";position:absolute;left:0;right:0;top:64px;height:2px;background:var(--line)}
+.tl-scroll{
+  display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 1.4rem;
+  scrollbar-width:thin;scrollbar-color:var(--silver) transparent;
+}
+.tl-scroll::-webkit-scrollbar{height:6px}
+.tl-scroll::-webkit-scrollbar-thumb{background:var(--silver);border-radius:99px}
+.tl-card{
+  flex:0 0 auto;width:clamp(232px,74vw,306px);scroll-snap-align:start;background:#fff;
+  border:1px solid var(--line);border-radius:16px;padding:1.4rem;position:relative;transition:border-color .22s,transform .22s,box-shadow .22s;
+}
+.tl-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:var(--shadow)}
+.tl-year{
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 114;font-weight:900;
+  font-size:clamp(1.5rem,4vw,2.1rem);line-height:1;color:var(--green);letter-spacing:-.02em;
+}
+.tl-dot{width:15px;height:15px;border-radius:50%;background:var(--lime);border:3px solid var(--deep);margin:1rem 0 1.1rem}
+.tl-card:hover .tl-dot{background:var(--green);border-color:var(--lime)}
+.tl-card h4{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:.94rem;letter-spacing:.01em;margin-bottom:.5rem}
+.tl-card p{font-size:.87rem;color:var(--muted);line-height:1.6}
+.tl-card.accent{background:var(--deep);border-color:var(--deep)}
+.tl-card.accent .tl-year{color:var(--lime)}
+.tl-card.accent h4{color:#fff}
+.tl-card.accent p{color:#B9C8BE}
+.tl-card.accent .tl-dot{background:var(--lime);border-color:#fff}
+
+/* názvy klubu v čase */
+.names{margin-top:2.6rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.names div{background:#fff;padding:1rem .9rem}
+.names b{display:block;font-family:'Archivo',sans-serif;font-weight:800;font-size:.82rem;color:var(--green);letter-spacing:.06em}
+.names span{display:block;font-size:.8rem;color:var(--muted);margin-top:.25rem;line-height:1.45}
+
+/* družstva — mřížka odznaků */
+.teams{margin-top:clamp(2.4rem,4vw,3.6rem)}
+.teams-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.9rem;margin-top:1.4rem}
+.tbadge{
+  position:relative;background:var(--gray);border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.1rem 1.2rem;
+  text-align:center;overflow:hidden;transition:transform .22s,background .22s,border-color .22s;
+}
+.tbadge::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:var(--lime)}
+.tbadge:nth-child(1)::before,.tbadge:nth-child(2)::before{background:var(--green)}
+.tbadge:hover{transform:translateY(-4px);background:#fff;border-color:var(--green)}
+.tbadge b{display:block;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:900;
+  text-transform:uppercase;font-size:clamp(.95rem,2vw,1.2rem);letter-spacing:-.01em}
+.tbadge span{display:block;margin-top:.35rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.teams-note{margin-top:1rem;font-size:.83rem;color:var(--muted)}
+.teams-note a{color:var(--green);font-weight:600;border-bottom:1px solid var(--lime)}
+
+/* ============ 8. ODCHOVANCI ============ */
+.alumni{background:var(--gray)}
+.al-list{display:flex;flex-direction:column;gap:.8rem}
+.al{
+  display:grid;grid-template-columns:14px minmax(0,1fr) auto;align-items:center;gap:1.4rem;
+  background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  transition:transform .22s,box-shadow .22s,border-color .22s;
+}
+.al:hover{transform:translateX(6px);box-shadow:var(--shadow);border-color:var(--green)}
+.al .bar{align-self:stretch;background:var(--green)}
+.al:nth-child(even) .bar{background:var(--lime)}
+.al-body{padding:1.15rem 0}
+.al-name{
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:900;text-transform:uppercase;
+  font-size:clamp(1.15rem,3.4vw,2.05rem);line-height:1.05;letter-spacing:-.02em;
+}
+.al-desc{font-size:.87rem;color:var(--muted);margin-top:.3rem}
+.al-tag{
+  padding:.4rem .85rem;margin-right:1.2rem;border-radius:999px;background:var(--gray);
+  font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);white-space:nowrap;
+}
+
+/* Ex Pilsen */
+.expilsen{
+  margin-top:clamp(2rem,3.6vw,3rem);background:var(--deep);color:#fff;border-radius:20px;
+  padding:clamp(1.6rem,3.4vw,3rem);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:clamp(1.4rem,3vw,3rem);
+  position:relative;overflow:hidden;
+}
+.expilsen::after{
+  content:"1971";position:absolute;right:-.06em;bottom:-.34em;font-family:'Archivo',sans-serif;font-weight:900;
+  font-size:clamp(7rem,18vw,15rem);color:rgba(255,255,255,.045);line-height:1;pointer-events:none;letter-spacing:-.04em;
+}
+.expilsen>*{position:relative;z-index:2}
+.expilsen h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 114;font-weight:900;text-transform:uppercase;
+  font-size:clamp(1.4rem,3.6vw,2.4rem);letter-spacing:-.02em;margin:.6rem 0 1rem}
+.expilsen p{color:#B9C8BE;font-size:.94rem}
+.ep-facts{display:flex;flex-direction:column;gap:.7rem;align-self:center}
+.ep-f{border:1px solid var(--line-d);border-radius:12px;padding:.95rem 1.1rem;background:rgba(255,255,255,.04)}
+.ep-f b{display:block;font-family:'Archivo',sans-serif;font-weight:800;color:var(--lime);font-size:.86rem;letter-spacing:.08em;text-transform:uppercase}
+.ep-f span{font-size:.85rem;color:#CBD8CF}
+
+/* ============ 9. AKADEMIE ============ */
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.prog{
+  border:1px solid var(--line);border-radius:18px;padding:clamp(1.3rem,2.2vw,1.9rem);background:#fff;
+  display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden;
+}
+.prog:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--green)}
+.prog-n{
+  font-family:'Archivo',sans-serif;font-weight:900;font-size:2.6rem;line-height:1;color:var(--gray);letter-spacing:-.04em;
+  transition:color .22s;
+}
+.prog:hover .prog-n{color:var(--lime)}
+.prog h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 110;font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.05rem,2.2vw,1.35rem);margin:.9rem 0 .35rem}
+.prog .age{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:700}
+.prog p{font-size:.9rem;color:var(--muted);margin-top:.8rem}
+.prog .grp{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:1rem}
+.prog .grp span{
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.72rem;padding:.28rem .6rem;border-radius:6px;
+  background:var(--deep);color:var(--lime);letter-spacing:.06em;
+}
+.prog .lead-by{margin-top:auto;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+.prog .lead-by b{color:var(--ink);font-weight:600}
+
+.aka-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:1.2rem}
+.aka-nums div{background:var(--gray);padding:1.3rem 1.1rem}
+.aka-nums b{display:block;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:900;
+  font-size:clamp(1.7rem,4vw,2.6rem);line-height:1;color:var(--green);letter-spacing:-.02em}
+.aka-nums span{display:block;margin-top:.4rem;font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+
+.camps{margin-top:1.2rem;background:var(--deep);color:#fff;border-radius:18px;padding:clamp(1.4rem,2.6vw,2.2rem);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.6rem;align-items:center}
+.camps h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:900;text-transform:uppercase;
+  font-size:clamp(1.2rem,2.6vw,1.7rem);letter-spacing:-.01em}
+.camps p{color:#B9C8BE;font-size:.9rem;margin-top:.5rem;max-width:52ch}
+.camp-dates{display:flex;gap:.7rem;flex-wrap:wrap}
+.camp-d{border:1px solid var(--line-d);background:rgba(255,255,255,.05);border-radius:12px;padding:.9rem 1.15rem;min-width:150px}
+.camp-d b{display:block;font-family:'Archivo',sans-serif;font-weight:900;font-size:1.05rem;color:var(--lime)}
+.camp-d span{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:#9FB2A5}
+.camp-price{display:flex;gap:1.4rem;margin-top:1.1rem;flex-wrap:wrap}
+.camp-price div b{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.25rem;color:#fff}
+.camp-price div span{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#9FB2A5}
+
+/* ============ 10. TRENÉŘI ============ */
+.coach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.coach{
+  border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;display:flex;flex-direction:column;
+  transition:transform .22s,box-shadow .22s;
+}
+.coach:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.coach-ph{height:158px;position:relative;background:linear-gradient(150deg,var(--deep) 0%,var(--green) 100%);overflow:hidden}
+.coach-ph::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+.coach-ph .mono{
+  position:absolute;inset:0;display:grid;place-items:center;font-family:'Archivo',sans-serif;font-weight:900;
+  font-size:3.1rem;color:rgba(255,255,255,.9);letter-spacing:-.03em;
+}
+.coach-ph .ball{position:absolute;right:-26px;bottom:-26px;width:96px;height:96px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#E9F58C,var(--lime) 52%,#9CB32C 100%);opacity:.85}
+.coach-b{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;flex:1}
+.coach-b h3{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1.02rem;letter-spacing:-.01em}
+.coach-role{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700;margin-top:.4rem}
+.coach-b p{font-size:.85rem;color:var(--muted);margin-top:.7rem}
+.coach-c{margin-top:auto;padding-top:1rem;font-size:.86rem;font-weight:600}
+.coach-c a{display:block;color:var(--ink)}
+.coach-c a:hover{color:var(--green)}
+.coach.tile{background:var(--deep);border-color:var(--deep);justify-content:center;padding:1.6rem 1.4rem;text-align:left}
+.coach.tile b{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 114;font-weight:900;font-size:clamp(2.4rem,6vw,3.6rem);
+  color:var(--lime);line-height:1;letter-spacing:-.03em}
+.coach.tile span{display:block;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;color:#fff;
+  font-size:1rem;margin-top:.5rem;letter-spacing:.02em}
+.coach.tile p{color:#9FB2A5;font-size:.85rem;margin-top:.8rem}
+.coach.open-card{background:var(--gray);border-style:dashed;border-color:var(--silver);justify-content:center;padding:1.6rem 1.4rem}
+.coach.open-card h3{font-size:1rem}
+.coach.open-card p{margin-top:.6rem}
+
+.vedeni{margin-top:1.6rem;border:1px solid var(--line);border-radius:18px;padding:clamp(1.3rem,2.4vw,2rem);background:var(--gray)}
+.vedeni h3{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1rem;letter-spacing:.04em}
+.ved-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.2rem}
+.ved{background:#fff;border-radius:12px;padding:.95rem 1.05rem;border-left:3px solid var(--green)}
+.ved b{display:block;font-size:.92rem;font-weight:600}
+.ved span{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+.ved.rev{border-left-color:var(--lime)}
+
+/* ============ 11. PŘIHLÁŠKA ============ */
+.apply{background:var(--deep);color:#fff}
+.form-shell{background:#fff;color:var(--ink);border-radius:22px;padding:clamp(1.3rem,3vw,2.6rem);box-shadow:0 40px 80px -50px rgba(0,0,0,.7)}
+.steps{display:flex;align-items:center;gap:.5rem;margin-bottom:1.8rem;flex-wrap:nowrap}
+.step-i{display:flex;align-items:center;gap:.6rem;flex:0 0 auto;min-width:0}
+.step-i .no{
+  width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;flex:none;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.85rem;color:var(--muted);transition:.22s;
+}
+.step-i .lb{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);white-space:nowrap}
+.step-i.active .no{background:var(--green);border-color:var(--green);color:#fff}
+.step-i.active .lb{color:var(--ink)}
+.step-i.done .no{background:var(--lime);border-color:var(--lime);color:var(--deep)}
+.step-line{flex:1 1 auto;height:2px;background:var(--line);min-width:12px;border-radius:2px}
+.step-line.on{background:var(--lime)}
+.fstep{display:none}
+.fstep.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fstep>h3{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(1.1rem,2.4vw,1.4rem);margin-bottom:.4rem}
+.fstep>.fs-note{font-size:.87rem;color:var(--muted);margin-bottom:1.4rem}
+
+.mem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.mem{
+  text-align:left;border:2px solid var(--line);background:#fff;border-radius:14px;padding:1.1rem 1.15rem;cursor:pointer;
+  transition:border-color .18s,background .18s,transform .18s;position:relative;
+}
+.mem:hover{transform:translateY(-3px);border-color:var(--silver)}
+.mem b{display:block;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:.94rem}
+.mem .pr{display:block;font-family:'Archivo',sans-serif;font-weight:900;font-size:1.5rem;color:var(--green);margin-top:.5rem;line-height:1}
+.mem .pn{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.mem[aria-pressed="true"]{border-color:var(--green);background:#F4F9F5}
+.mem[aria-pressed="true"]::after{
+  content:"✓";position:absolute;top:.7rem;right:.75rem;width:22px;height:22px;border-radius:50%;background:var(--green);
+  color:#fff;display:grid;place-items:center;font-size:.7rem;font-weight:700;
+}
+.fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.field label .req{color:var(--green)}
+.field input,.field select,.field textarea{
+  border:1.5px solid var(--line);border-radius:10px;padding:.78rem .9rem;background:#fff;font-size:.95rem;
+  transition:border-color .18s,box-shadow .18s;width:100%;
+}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(30,107,69,.12)}
+.field.err input,.field.err select,.field.err textarea{border-color:#B23A3A;background:#FDF6F6}
+.field .msg{font-size:.74rem;color:#B23A3A;display:none}
+.field.err .msg{display:block}
+.guard{display:none;margin-top:1.1rem;border:1.5px dashed var(--silver);border-radius:14px;padding:1.1rem;background:var(--gray)}
+.guard.on{display:block}
+.guard h4{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:.86rem;margin-bottom:.9rem;letter-spacing:.05em}
+.levels{display:flex;gap:.6rem;flex-wrap:wrap}
+.levels label{
+  border:1.5px solid var(--line);border-radius:999px;padding:.6rem 1.1rem;cursor:pointer;font-size:.84rem;font-weight:600;
+  transition:.18s;background:#fff;
+}
+.levels input{position:absolute;opacity:0;width:0;height:0}
+.levels label:has(input:checked){border-color:var(--green);background:var(--green);color:#fff}
+.levels label:hover{border-color:var(--silver)}
+.f-nav{display:flex;gap:.7rem;margin-top:1.6rem;flex-wrap:wrap}
+.f-nav .btn{flex:0 1 auto}
+
+.sum{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.sum-h{background:var(--deep);color:#fff;padding:1rem 1.3rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.sum-h b{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:.95rem}
+.sum-h .p{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.6rem;color:var(--lime);line-height:1}
+.sum-rows{display:grid;grid-template-columns:repeat(2,1fr)}
+.sum-rows div{padding:.85rem 1.3rem;border-bottom:1px solid var(--line);font-size:.9rem;min-width:0}
+.sum-rows div:nth-child(odd){border-right:1px solid var(--line)}
+.sum-rows span{display:block;font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem}
+.sum-rows b{font-weight:600;overflow-wrap:anywhere}
+.checks{margin-top:1.3rem;display:flex;flex-direction:column;gap:.8rem}
+.chk{display:flex;gap:.75rem;align-items:flex-start;font-size:.87rem;color:var(--muted);cursor:pointer}
+.chk input{width:20px;height:20px;flex:none;accent-color:var(--green);margin-top:.15rem}
+.chk.err{color:#B23A3A}
+.thanks{display:none;text-align:center;padding:clamp(2rem,5vw,3.6rem) 1rem}
+.thanks.on{display:block}
+.thanks .ok{width:66px;height:66px;border-radius:50%;background:var(--lime);color:var(--deep);display:grid;place-items:center;
+  margin:0 auto 1.3rem;font-size:1.8rem;font-weight:800}
+.thanks h3{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:900;text-transform:uppercase;
+  font-size:clamp(1.3rem,3.4vw,2rem)}
+.thanks p{color:var(--muted);margin-top:.8rem;max-width:46ch;margin-inline:auto}
+
+/* ============ 12. CENÍK ============ */
+.pills{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:clamp(1.8rem,3vw,2.6rem)}
+.pill{
+  border:2px solid var(--line);background:#fff;border-radius:999px;padding:.75rem 1.4rem;cursor:pointer;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;
+  transition:.2s;color:var(--ink);
+}
+.pill:hover{border-color:var(--green);color:var(--green)}
+.pill[aria-selected="true"]{background:var(--deep);border-color:var(--deep);color:#fff}
+.pricepanel{display:none}
+.pricepanel.on{display:block;animation:fade .35s ease}
+.p-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem}
+.pricepanel h2{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:900;text-transform:uppercase;
+  font-size:clamp(1.4rem,3.6vw,2.4rem);letter-spacing:-.02em}
+.p-note{border-left:4px solid var(--lime);background:var(--gray);padding:.9rem 1.2rem;margin:1.2rem 0 2rem;font-size:.88rem;color:var(--muted);border-radius:0 10px 10px 0}
+.p-note b{color:var(--ink)}
+.p-sec{margin-bottom:1.8rem}
+.p-sec h3{
+  background:#E9F0E9;color:var(--deep);font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;
+  font-size:.9rem;letter-spacing:.07em;padding:.85rem 1.2rem;border-radius:12px 12px 0 0;border:1px solid var(--line);border-bottom:none;
+}
+.p-sec.alt h3{background:var(--deep);color:var(--lime);border-color:var(--deep)}
+.ptable{width:100%;border-collapse:collapse;border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;overflow:hidden;background:#fff}
+.ptable thead th{
+  background:#fff;text-align:left;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  font-weight:700;padding:.7rem 1.2rem;border-bottom:1px solid var(--line);
+}
+.ptable th.num,.ptable td.num{text-align:right}
+.ptable td{padding:.85rem 1.2rem;border-bottom:1px solid var(--line);font-size:.94rem;vertical-align:middle}
+.ptable tbody tr:nth-child(even) td{background:var(--gray)}
+.ptable tbody tr:last-child td{border-bottom:none}
+.ptable td.nm{font-weight:600}
+.ptable td.meta{font-size:.82rem;color:var(--muted)}
+.ptable td.pr{font-family:'Archivo',sans-serif;font-weight:800;white-space:nowrap;font-size:1rem}
+.ptable td.mb{font-family:'Archivo',sans-serif;font-weight:800;white-space:nowrap;color:var(--green);font-size:1rem}
+.price-cta{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.price-cta p{font-size:.88rem;color:var(--muted)}
+
+/* ============ 13. AREÁL ============ */
+.areal{background:var(--gray)}
+.ar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.ar{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.4rem;transition:transform .22s,border-color .22s}
+.ar:hover{transform:translateY(-4px);border-color:var(--green)}
+.ar .ic{width:44px;height:44px;border-radius:12px;background:var(--deep);display:grid;place-items:center;margin-bottom:1rem}
+.ar .ic svg{width:21px;height:21px;color:var(--lime)}
+.ar b{display:block;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:.95rem}
+.ar span{display:block;font-size:.87rem;color:var(--muted);margin-top:.4rem}
+.ar .big{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:900;font-size:2.4rem;color:var(--green);line-height:1;letter-spacing:-.03em}
+
+/* ============ 14. KONTAKT ============ */
+.ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(1.6rem,3vw,3rem);align-items:start}
+.ct-block{border-top:2px solid var(--ink);padding-top:1rem;margin-bottom:1.6rem}
+.ct-block .lb{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.ct-block .vl{font-size:1rem;margin-top:.5rem;line-height:1.75}
+.ct-block .vl a{border-bottom:1px solid var(--lime)}
+.ct-block .vl a:hover{color:var(--green)}
+.ct-p{display:flex;gap:.9rem;padding:.75rem 0;border-bottom:1px solid var(--line)}
+.ct-p:last-child{border-bottom:none}
+.ct-p b{font-weight:600;display:block}
+.ct-p span{font-size:.8rem;color:var(--muted);display:block}
+.ct-p .ph{margin-left:auto;font-family:'Archivo',sans-serif;font-weight:800;white-space:nowrap;color:var(--green)}
+.socials{display:flex;gap:.6rem;margin-top:.4rem}
+.socials a{
+  padding:.55rem 1.1rem;border:1.5px solid var(--line);border-radius:999px;font-size:.78rem;font-weight:600;transition:.2s;
+}
+.socials a:hover{border-color:var(--green);background:var(--green);color:#fff}
+
+/* mapa v CSS */
+.map{
+  position:relative;aspect-ratio:1/1;max-height:520px;border-radius:20px;overflow:hidden;background:#E8EDE6;
+  border:1px solid var(--line);
+}
+.map .park{position:absolute;left:4%;top:8%;width:56%;height:62%;background:#D6E3C9;border-radius:46% 38% 44% 40%}
+.map .park::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;opacity:.5;
+  background:repeating-linear-gradient(52deg,rgba(30,107,69,.16) 0 3px,transparent 3px 11px);
+}
+.map .road{position:absolute;background:#fff;box-shadow:0 0 0 1px rgba(16,23,19,.06)}
+.map .r1{left:-10%;top:63%;width:130%;height:16px;transform:rotate(-7deg)}
+.map .r2{left:62%;top:-10%;width:15px;height:130%;transform:rotate(6deg)}
+.map .r3{left:-6%;top:24%;width:80%;height:9px;transform:rotate(9deg);background:#F7F9F6}
+.map .r1::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;transform:translateY(-1px);
+  background:repeating-linear-gradient(90deg,var(--silver) 0 12px,transparent 12px 24px)}
+.map .club{
+  position:absolute;left:20%;top:50%;width:44%;height:28%;background:#fff;border:2px solid var(--deep);border-radius:12px;
+  padding:9px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:5px;
+}
+.map .club i{background:#D9A15F;border-radius:2px;display:block}
+.map .club i.h{background:var(--deep)}
+.map .lbl{position:absolute;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.map .lbl.l1{left:9%;top:22%;color:#4C7A3F}
+.map .lbl.l2{left:66%;top:76%;transform:rotate(6deg)}
+.map .lbl.l3{left:6%;top:84%}
+.map .pin{position:absolute;left:39%;top:46%;transform:translate(-50%,-100%);z-index:4}
+.map .pin b{
+  display:block;background:var(--deep);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:.68rem;
+  letter-spacing:.08em;text-transform:uppercase;padding:.45rem .75rem;border-radius:999px;white-space:nowrap;
+  box-shadow:0 8px 20px -8px rgba(0,0,0,.6);
+}
+.map .pin i{display:block;width:14px;height:14px;background:var(--lime);border:3px solid var(--deep);border-radius:50%;margin:.4rem auto 0}
+.map .pin::after{
+  content:"";position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);width:34px;height:34px;border-radius:50%;
+  border:2px solid var(--lime);animation:ring 2.6s ease-out infinite;
+}
+@keyframes ring{0%{transform:translateX(-50%) scale(.3);opacity:1}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+.map-cap{position:absolute;left:0;right:0;bottom:0;padding:.85rem 1.1rem;background:rgba(255,255,255,.93);
+  font-size:.78rem;color:var(--muted);border-top:1px solid var(--line)}
+.map-cap b{color:var(--ink)}
+
+/* ============ 15. PATIČKA ============ */
+.ft{background:var(--deep);color:#B9C8BE;padding:clamp(2.6rem,5vw,4rem) 0 1.6rem;position:relative;overflow:hidden}
+.ft::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--green),var(--lime))}
+.ft-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:2rem}
+.ft h4{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;color:#fff;font-size:.8rem;letter-spacing:.13em;margin-bottom:1rem}
+.ft a:hover{color:var(--lime)}
+.ft li{padding:.28rem 0;font-size:.88rem}
+.ft .ft-about{font-size:.88rem;margin-top:1.1rem;max-width:38ch}
+.ft-bar{margin-top:2.6rem;padding-top:1.3rem;border-top:1px solid var(--line-d);display:flex;justify-content:space-between;
+  gap:1rem;flex-wrap:wrap;font-size:.78rem;color:#8FA396}
+.ft-bar .yrs{font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:.12em;color:var(--lime)}
+.up{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;background:var(--deep);color:var(--lime);
+  border:none;cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;z-index:70;
+  box-shadow:0 12px 26px -12px rgba(0,0,0,.7)}
+.up.on{opacity:1;pointer-events:auto}
+.up:hover{transform:translateY(-3px)}
+
+/* ============ 15B. AKTUALITY ============ */
+.news-all{flex:none}
+
+/* filtrovací pilulky */
+.nf-bar{
+  display:flex;gap:.55rem;overflow-x:auto;overflow-y:hidden;padding-bottom:.55rem;
+  margin-bottom:clamp(1.4rem,2.6vw,2.2rem);-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--silver) transparent;
+}
+.nf-bar::-webkit-scrollbar{height:5px}
+.nf-bar::-webkit-scrollbar-thumb{background:var(--silver);border-radius:99px}
+.nf{
+  flex:0 0 auto;border:2px solid var(--line);background:#fff;border-radius:999px;padding:.6rem 1.15rem;cursor:pointer;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink);white-space:nowrap;transition:background .2s,border-color .2s,color .2s;
+}
+.nf:hover{border-color:var(--green);color:var(--green)}
+.nf[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:#fff}
+
+/* mřížka */
+.news-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.1rem;grid-auto-flow:dense}
+.news{
+  display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  transition:transform .22s,box-shadow .22s,border-color .22s;
+}
+.news[hidden]{display:none}
+.news:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--green)}
+
+/* kreslená plocha místo fotky */
+.news-vis{
+  position:relative;height:132px;flex:none;overflow:hidden;
+  background:linear-gradient(150deg,var(--deep) 0%,var(--green) 100%);
+}
+.news-vis::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+.news-vis::after{
+  content:"";position:absolute;left:1.1rem;right:1.1rem;top:38%;height:2px;background:rgba(255,255,255,.18);
+}
+.news-ball{
+  position:absolute;right:-26px;bottom:-26px;width:92px;height:92px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#E9F58C,var(--lime) 52%,#9CB32C 100%);opacity:.85;
+  transition:transform .3s ease;
+}
+.news:hover .news-ball{transform:scale(1.08) translate(-4px,-4px)}
+.news-date{
+  position:absolute;left:1.15rem;bottom:.85rem;z-index:2;
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 116;color:#fff;
+}
+.news-date b{display:block;font-weight:900;font-size:2.9rem;line-height:.9;letter-spacing:-.045em}
+.news-date span{
+  display:block;margin-top:.28rem;font-weight:800;font-variation-settings:'wdth' 100;
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);
+}
+
+/* štítek kategorie */
+.news-tag{
+  position:absolute;right:.85rem;top:.85rem;z-index:2;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;
+  padding:.34rem .66rem;border-radius:7px;background:var(--lime);color:var(--deep);white-space:nowrap;
+}
+.news-tag.t-akademie{background:#fff;color:var(--deep)}
+.news-tag.t-kempy{background:var(--silver);color:var(--deep)}
+.news-tag.t-cenik{background:transparent;color:var(--lime);box-shadow:inset 0 0 0 1.5px var(--lime)}
+.news-tag.t-kurzy{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+
+/* tělo karty */
+.news-b{padding:1.15rem 1.25rem 1.3rem;display:flex;flex-direction:column;flex:1}
+.news-b h3{
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 108;font-weight:800;text-transform:uppercase;
+  font-size:1rem;line-height:1.18;letter-spacing:-.005em;transition:color .2s;
+}
+.news:hover .news-b h3{color:var(--green)}
+.news-p{font-size:.85rem;color:var(--muted);margin-top:.6rem;line-height:1.6}
+.news-more{
+  margin-top:auto;padding-top:1rem;display:inline-flex;align-items:center;gap:.4rem;align-self:flex-start;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;color:var(--green);
+}
+.news-more svg{width:13px;height:13px;transition:transform .2s}
+.news:hover .news-more svg{transform:translateX(4px)}
+.news-more:hover{color:var(--deep)}
+
+/* hlavní článek — pás přes celou šířku */
+.news.lead{grid-column:1/-1;flex-direction:row}
+.news.lead .news-vis{height:auto;width:36%;min-height:258px;flex:none}
+.news.lead .news-vis::after{top:36%}
+.news.lead .news-ball{width:148px;height:148px;right:-38px;bottom:-38px}
+.news.lead .news-date{left:1.6rem;bottom:1.4rem}
+.news.lead .news-date b{font-size:clamp(3.2rem,5vw,4.6rem)}
+.news.lead .news-date span{font-size:.82rem;margin-top:.4rem}
+.news.lead .news-tag{right:1.2rem;top:1.2rem;font-size:.7rem;padding:.42rem .8rem}
+.news.lead .news-b{justify-content:center;padding:clamp(1.4rem,2.6vw,2.4rem)}
+.news.lead .news-b h3{font-size:clamp(1.3rem,2.6vw,2.05rem);line-height:1.08}
+.news.lead .news-p{font-size:.98rem;margin-top:.85rem;max-width:52ch}
+.news.lead .news-more{margin-top:0;padding-top:1.4rem;font-size:.76rem}
+
+/* druhá karta přes dva sloupce — mřížka zůstává bez děr */
+.news.wide{grid-column:span 2}
+.news.wide .news-vis{height:150px}
+.news.wide .news-b h3{font-size:1.15rem}
+.news-flag{
+  display:inline-flex;align-items:center;gap:.45rem;margin-bottom:.75rem;
+  font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);
+}
+.news-flag::before{content:"";width:20px;height:3px;background:var(--lime);border-radius:2px;flex:none}
+.news:not(.lead) .news-flag{display:none}
+
+/* po zafiltrování se hlavní článek chová jako běžná karta */
+.news-grid.filtered .news.lead,.news-grid.filtered .news.wide{grid-column:auto;grid-row:auto;flex-direction:column}
+.news-grid.filtered .news.lead .news-vis,.news-grid.filtered .news.wide .news-vis{width:auto;height:132px;min-height:0}
+.news-grid.filtered .news.lead .news-vis::after{top:38%}
+.news-grid.filtered .news.lead .news-ball{width:92px;height:92px;right:-26px;bottom:-26px}
+.news-grid.filtered .news.lead .news-date{left:1.15rem;bottom:.85rem}
+.news-grid.filtered .news.lead .news-date b{font-size:2.9rem}
+.news-grid.filtered .news.lead .news-date span{font-size:.74rem;margin-top:.28rem}
+.news-grid.filtered .news.lead .news-tag{right:.85rem;top:.85rem;font-size:.66rem;padding:.34rem .66rem}
+.news-grid.filtered .news.lead .news-b{justify-content:flex-start;padding:1.15rem 1.25rem 1.3rem}
+.news-grid.filtered .news.lead .news-b h3,.news-grid.filtered .news.wide .news-b h3{font-size:1rem;line-height:1.18}
+.news-grid.filtered .news.lead .news-p{font-size:.85rem;margin-top:.6rem;max-width:none}
+.news-grid.filtered .news.lead .news-more{margin-top:auto;padding-top:1rem;font-size:.72rem}
+.news-grid.filtered .news-flag{display:none}
+
+/* ============ 16. RESPONZIVITA ============ */
+@media (min-width:1061px){ .map{position:sticky;top:96px} }
+@media (max-width:1180px){
+  .nav a{padding:.5rem .55rem;font-size:.74rem}
+  .hdr-cta{padding:.8rem 1rem;font-size:.72rem}
+}
+@media (max-width:1060px){
+  .wrap{width:min(1240px,100% - 2.4rem)}
+  .hero-grid{grid-template-columns:1fr;gap:2.2rem}
+  .res-card{max-width:520px}
+  .stat-grid{grid-template-columns:repeat(3,1fr)}
+  .stat:nth-child(4),.stat:nth-child(5){grid-column:span 1}
+  .names{grid-template-columns:repeat(3,1fr)}
+  .teams-grid{grid-template-columns:repeat(3,1fr)}
+  .prog-grid{grid-template-columns:1fr}
+  .coach-grid{grid-template-columns:repeat(2,1fr)}
+  .ved-grid{grid-template-columns:repeat(2,1fr)}
+  .ar-grid{grid-template-columns:repeat(2,1fr)}
+  .expilsen{grid-template-columns:1fr}
+  .camps{grid-template-columns:1fr}
+  .ct-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:repeat(2,1fr)}
+  .mem-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .news.wide{grid-column:1/-1}
+  .news.wide .news-vis{height:132px}
+  .news.wide .news-b h3{font-size:1rem}
+  .nav a{padding:.5rem .55rem;font-size:.74rem}
+  .hdr-cta{padding:.8rem 1rem;font-size:.72rem}
+}
+/* s novou položkou Aktuality se plná navigace pod ~1000 px nevejde → burger dřív */
+@media (max-width:1024px){
+  html{scroll-padding-top:78px}
+  .nav,.hdr-cta{display:none}
+  .burger{display:grid}
+}
+@media (max-width:820px){
+  html{scroll-padding-top:78px}
+  .nav,.hdr-cta{display:none}
+  .burger{display:grid}
+  .topbar .tb-adr{display:none}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:last-child{grid-column:1/-1}
+  .aka-nums{grid-template-columns:repeat(2,1fr)}
+  .names{grid-template-columns:repeat(2,1fr)}
+  .step-i .lb{display:none}
+  .steps{gap:.3rem}
+  .sum-rows{grid-template-columns:1fr}
+  .sum-rows div:nth-child(odd){border-right:none}
+  .al{grid-template-columns:10px minmax(0,1fr);gap:1rem}
+  .al-tag{grid-column:2;margin:0 1.2rem 1.1rem 0;justify-self:start}
+  .al-body{padding-bottom:.5rem}
+  .news.lead{flex-direction:column}
+  .news.lead .news-vis{width:auto;min-height:0;height:172px}
+  .news.lead .news-b{justify-content:flex-start}
+}
+@media (max-width:600px){
+  .wrap{width:min(1240px,100% - 1.8rem)}
+  .topbar .wrap{gap:.8rem;font-size:.7rem}
+  .topbar .tb-mail{display:none}
+  .hero-facts{gap:1.2rem}
+  .stat-grid{grid-template-columns:1fr}
+  .stat:last-child{grid-column:auto}
+  .teams-grid{grid-template-columns:repeat(2,1fr)}
+  .teams-grid .tbadge:last-child{grid-column:1/-1}
+  .coach-grid{grid-template-columns:1fr}
+  .ved-grid{grid-template-columns:1fr}
+  .ar-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr;gap:1.6rem}
+  .mem-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .names{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .news.lead .news-vis{height:146px}
+  .news.lead .news-date b{font-size:2.9rem}
+  .f-nav .btn{flex:1 1 100%}
+  .logo img{height:40px}
+  .hdr.scrolled .logo img{height:36px}
+  .camp-dates{width:100%}
+  .camp-d{flex:1 1 100%}
+  .map{aspect-ratio:4/5}
+}
+/* ceníková tabulka → bloky pod 640 px */
+@media (max-width:640px){
+  .ptable,.ptable tbody,.ptable tr,.ptable td{display:block;width:100%}
+  .ptable thead{display:none}
+  .ptable{border-radius:0 0 12px 12px}
+  .ptable tr{position:relative;padding:.95rem 1.1rem;border-bottom:1px solid var(--line);min-height:60px}
+  .ptable tbody tr:nth-child(even){background:var(--gray)}
+  .ptable tbody tr:nth-child(even) td{background:transparent}
+  .ptable tr:last-child{border-bottom:none}
+  .ptable td{border:none;padding:0}
+  .ptable td.nm{padding-right:6.2rem;font-size:.95rem}
+  .ptable td.meta{padding-right:6.2rem;font-size:.8rem;margin-top:.15rem}
+  .ptable td.meta:empty{display:none}
+  .ptable td.pr{position:absolute;right:1.1rem;top:.9rem;width:auto;font-size:1.02rem}
+  .ptable td.mb{margin-top:.35rem;font-size:.82rem;color:var(--green)}
+  .ptable td.mb::before{content:attr(data-l) " ";color:var(--muted);font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.06em;
+    text-transform:uppercase;font-size:.68rem}
+  .ptable td.mb:empty{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. HORNÍ LIŠTA ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="tb-i tb-adr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      U Borského parku 2916/19, 301 00 Plzeň
+    </span>
+    <a class="tb-i tb-mail" href="mailto:info@tkslaviaplzen.cz">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      info@tkslaviaplzen.cz
+    </a>
+    <a class="tb-i tb-res" href="https://www.rogeronline.cz/v2/?klub=103" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      Rezervace kurtů
+    </a>
+    <span class="sp">
+      <button class="lang" aria-pressed="true">CZ</button>
+      <button class="lang" aria-pressed="false" title="Připravujeme">EN</button>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 2. HLAVIČKA ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="TK Slavia Plzeň — domů">
+      <img src="assets/logo-tk-slavia-trim.png" alt="TK Slavia Plzeň" width="313" height="220">
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#aktuality">Aktuality</a>
+      <a href="#tradice">Tradice</a>
+      <a href="#odchovanci">Odchovanci</a>
+      <a href="#akademie">Akademie</a>
+      <a href="#treneri">Trenéři</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#areal">Areál</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="#prihlaska" class="btn btn-green btn-sm hdr-cta">Přihláška do klubu</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Otevřít menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<nav class="mnav" id="mnav" aria-label="Mobilní navigace">
+  <div class="mnav-top"><button class="mnav-close" id="mclose" aria-label="Zavřít menu">✕</button></div>
+  <a class="ml" href="#aktuality">Aktuality</a>
+  <a class="ml" href="#tradice">Tradice</a>
+  <a class="ml" href="#odchovanci">Odchovanci</a>
+  <a class="ml" href="#akademie">Akademie</a>
+  <a class="ml" href="#treneri">Trenéři</a>
+  <a class="ml" href="#cenik">Ceník</a>
+  <a class="ml" href="#areal">Areál</a>
+  <a class="ml" href="#kontakt">Kontakt</a>
+  <a href="#prihlaska" class="btn btn-lime">Přihláška do klubu</a>
+  <a href="https://www.rogeronline.cz/v2/?klub=103" target="_blank" rel="noopener" class="btn btn-line-l">Rezervace kurtů</a>
+  <div class="m-contact">
+    U Borského parku 2916/19, Plzeň<br>
+    <a href="mailto:info@tkslaviaplzen.cz">info@tkslaviaplzen.cz</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============ 3. HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker"><i></i>TK Slavia Plzeň z.s. · založeno 1953</span>
+        <h1 class="hero-h">
+          <span class="ln">Tenis</span>
+          <span class="ln">s ligovou</span>
+          <span class="ln"><span class="hl">pamětí</span></span>
+        </h1>
+        <p class="hero-sub">
+          Přes sedmdesát let plzeňského tenisu na jednom místě: premiéra v I. lize v roce 1966,
+          extraliga od roku 1974, turnaj Ex Pilsen a akademie, ze které jdou hráči dál.
+        </p>
+        <div class="hero-btns">
+          <a href="#prihlaska" class="btn btn-green">Přihláška do klubu</a>
+          <a href="#cenik" class="btn btn-line">Ceník a členství</a>
+        </div>
+        <div class="hero-facts">
+          <div><b class="mono-num">17</b><span>antukových dvorců</span></div>
+          <div><b class="mono-num">6</b><span>krytých dvorců</span></div>
+          <div><b class="mono-num">129</b><span>hráčů akademie</span></div>
+          <div><b class="mono-num">5</b><span>družstev v soutěžích</span></div>
+        </div>
+      </div>
+
+      <aside class="res-card reveal">
+        <span class="rc-lab">Online rezervace</span>
+        <h3>Rezervuj kurt</h3>
+        <p>Dvorce rezervujeme přes systém rogeronline.cz. Členové s online přístupem (PIN) si rezervují sami.</p>
+        <div class="rc-club">
+          <b class="mono-num">103</b>
+          <span>Číslo klubu<br>v systému rogeronline.cz</span>
+        </div>
+        <a href="https://www.rogeronline.cz/v2/?klub=103" target="_blank" rel="noopener" class="btn btn-lime">Přejít na rezervace</a>
+        <p class="rc-note">Letní antuka: člen bez kódu 170 Kč, host 250 Kč za dvorec.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <div class="marquee__grp">
+      <span>I. liga</span><i></i><span>Extraliga</span><i></i><span>Ex Pilsen</span><i></i><span>Akademie</span><i></i><span>Od roku 1953</span><i></i>
+      <span>I. liga</span><i></i><span>Extraliga</span><i></i><span>Ex Pilsen</span><i></i><span>Akademie</span><i></i><span>Od roku 1953</span><i></i>
+    </div>
+    <div class="marquee__grp">
+      <span>I. liga</span><i></i><span>Extraliga</span><i></i><span>Ex Pilsen</span><i></i><span>Akademie</span><i></i><span>Od roku 1953</span><i></i>
+      <span>I. liga</span><i></i><span>Extraliga</span><i></i><span>Ex Pilsen</span><i></i><span>Akademie</span><i></i><span>Od roku 1953</span><i></i>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 5. STATISTIKY ============ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat-grid reveal">
+      <div class="stat"><b class="mono-num">1953</b><span>rok založení</span></div>
+      <div class="stat"><b class="mono-num">17</b><span>venkovních antukových dvorců</span></div>
+      <div class="stat"><b class="mono-num">6</b><span>krytých dvorců</span></div>
+      <div class="stat"><b class="mono-num">18</b><span>trenérů akademie</span></div>
+      <div class="stat"><b class="mono-num">129</b><span>hráčů akademie</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5B. AKTUALITY ============ -->
+<section class="sec" id="aktuality">
+  <div class="wrap">
+    <div class="head-row sec-head" style="max-width:none">
+      <div style="max-width:56ch">
+        <span class="eyebrow">Aktuality</span>
+        <h2 class="title disp">Novinky<br>z klubu</h2>
+        <p class="lead">Pozvánky, ceníky, nábory do akademie a termíny kempů — přehled toho,
+          co klub zveřejnil pro členy a rodiče.</p>
+      </div>
+      <a href="#" class="btn btn-line btn-sm news-all">Všechny články <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="nf-bar reveal" id="nfBar" role="group" aria-label="Filtr kategorií">
+      <button type="button" class="nf" data-f="*" aria-pressed="true">Vše</button>
+      <button type="button" class="nf" data-f="klub" aria-pressed="false">Klub</button>
+      <button type="button" class="nf" data-f="akademie" aria-pressed="false">Akademie</button>
+      <button type="button" class="nf" data-f="kempy" aria-pressed="false">Kempy</button>
+      <button type="button" class="nf" data-f="cenik" aria-pressed="false">Ceník</button>
+      <button type="button" class="nf" data-f="kurzy" aria-pressed="false">Kurzy</button>
+    </div>
+
+    <div class="news-grid" id="newsGrid" aria-live="polite">
+      <article class="news reveal lead" data-kat="klub">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-klub">Klub</span>
+          <time class="news-date" datetime="2026-04-21"><b class="mono-num">21.</b> <span class="mono-num">4. 2026</span></time>
+        </div>
+        <div class="news-b">
+          <span class="news-flag">Hlavní zpráva</span>
+          <h3>Členská schůze</h3>
+          <p class="news-p">Pozvánka na členskou schůzi klubu.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="news wide reveal d1" data-kat="cenik">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-cenik">Ceník</span>
+          <time class="news-date" datetime="2026-04-21"><b class="mono-num">21.</b> <span class="mono-num">4. 2026</span></time>
+        </div>
+        <div class="news-b">
+          <h3>Ceník léto 2026</h3>
+          <p class="news-p">Ceny pronájmu dvorců na letní sezónu 2026.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="news reveal d2" data-kat="akademie">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-akademie">Akademie</span>
+          <time class="news-date" datetime="2026-03-30"><b class="mono-num">30.</b> <span class="mono-num">3. 2026</span></time>
+        </div>
+        <div class="news-b">
+          <h3>Regionální tenisová akademie Plzeňského kraje – 1. a 2. třída</h3>
+          <p class="news-p">Nábor do akademie pro první a druhé třídy základních škol.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="news reveal d3" data-kat="akademie">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-akademie">Akademie</span>
+          <time class="news-date" datetime="2026-03-30"><b class="mono-num">30.</b> <span class="mono-num">3. 2026</span></time>
+        </div>
+        <div class="news-b">
+          <h3>Regionální tenisová akademie Plzeňského kraje – od 4 let</h3>
+          <p class="news-p">Nábor do akademie pro nejmenší děti od čtyř let.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="news reveal d1" data-kat="kempy">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-kempy">Kempy</span>
+          <time class="news-date" datetime="2026-02-08"><b class="mono-num">8.</b> <span class="mono-num">2. 2026</span></time>
+        </div>
+        <div class="news-b">
+          <h3>Letní tenisové kempy pro děti 2026</h3>
+          <p class="news-p">Termíny a program letních příměstských kempů.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="news reveal d2" data-kat="kempy">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-kempy">Kempy</span>
+          <time class="news-date" datetime="2025-12-04"><b class="mono-num">4.</b> <span class="mono-num">12. 2025</span></time>
+        </div>
+        <div class="news-b">
+          <h3>Tenisové soustředění Turecko</h3>
+          <p class="news-p">Nabídka zahraničního tenisového soustředění.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="news reveal d3" data-kat="kurzy">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-kurzy">Kurzy</span>
+          <time class="news-date" datetime="2025-09-11"><b class="mono-num">11.</b> <span class="mono-num">9. 2025</span></time>
+        </div>
+        <div class="news-b">
+          <h3>Kroužek – Základy tenisu pro 1. a 2. třídu ZŠ</h3>
+          <p class="news-p">Tenisový kroužek pro žáky prvních a druhých tříd.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="news reveal d4" data-kat="kurzy">
+        <div class="news-vis">
+          <i class="news-ball" aria-hidden="true"></i>
+          <span class="news-tag t-kurzy">Kurzy</span>
+          <time class="news-date" datetime="2025-09-11"><b class="mono-num">11.</b> <span class="mono-num">9. 2025</span></time>
+        </div>
+        <div class="news-b">
+          <h3>Kurz tenisu od 4 let</h3>
+          <p class="news-p">Pravidelný kurz tenisu pro děti od čtyř let.</p>
+          <a class="news-more" href="#">Číst dál <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. TRADICE ============ -->
+<section class="sec" id="tradice">
+  <div class="wrap">
+    <div class="head-row sec-head" style="max-width:none">
+      <div style="max-width:56ch">
+        <span class="eyebrow">Tradice od roku 1953</span>
+        <h2 class="title disp">Sedm dekád<br>plzeňského tenisu</h2>
+        <p class="lead">Od zapůjčených dvorců Lokomotivy k vlastnímu areálu v Borském parku, k I. lize,
+          extralize a mezinárodnímu juniorskému turnaji. Projděte si osu klubu.</p>
+      </div>
+      <div class="tl-controls">
+        <button class="tl-btn" id="tlPrev" aria-label="Předchozí">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 5-7 7 7 7"/></svg>
+        </button>
+        <button class="tl-btn" id="tlNext" aria-label="Další">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="tl-rail reveal">
+      <div class="tl-scroll" id="tlScroll">
+        <article class="tl-card">
+          <div class="tl-year mono-num">1953</div><div class="tl-dot"></div>
+          <h4>Vznik oddílu</h4>
+          <p>Tenisový oddíl DSO Slavia zakládají vysokoškolští studenti. Prvním předsedou je student VŠSE
+             Antonín Šimandl, u zrodu stojí Marcel Benda a Jan Záhlava. Hraje se na zapůjčených dvorcích Lokomotivy.</p>
+        </article>
+        <article class="tl-card">
+          <div class="tl-year mono-num">1957–58</div><div class="tl-dot"></div>
+          <h4>Vlastní areál a mládež</h4>
+          <p>Trenérem se stává Josef Reis, předsedou MUDr. J. Kubík. Začíná stavba vlastního areálu
+             v Borském parku a systematická práce s mládeží.</p>
+        </article>
+        <article class="tl-card">
+          <div class="tl-year mono-num">1964</div><div class="tl-dot"></div>
+          <h4>První postup</h4>
+          <p>Klub poprvé postupuje do vyšší soutěže. Systematická práce s mládeží se začíná projevovat ve výsledcích.</p>
+        </article>
+        <article class="tl-card accent">
+          <div class="tl-year mono-num">1966</div><div class="tl-dot"></div>
+          <h4>Premiérově I. liga</h4>
+          <p>Družstvo dospělých poprvé v historii nastupuje v I. lize.</p>
+        </article>
+        <article class="tl-card">
+          <div class="tl-year mono-num">1968–69</div><div class="tl-dot"></div>
+          <h4>Nejlepší umístění</h4>
+          <p>Třetí místo v lize — dosud nejlepší ligový výsledek v historii klubu.</p>
+        </article>
+        <article class="tl-card">
+          <div class="tl-year mono-num">1971</div><div class="tl-dot"></div>
+          <h4>Vzniká Ex Pilsen</h4>
+          <p>První ročník juniorského turnaje Ex Pilsen. Vyhrávají Maďar János Benyik a Češka Renáta Tomanová.
+             Turnaj se později stává součástí juniorského okruhu ITF.</p>
+        </article>
+        <article class="tl-card accent">
+          <div class="tl-year mono-num">1974</div><div class="tl-dot"></div>
+          <h4>Extraliga</h4>
+          <p>Klub se probojovává do extraligy — nejvyšší domácí soutěže družstev.</p>
+        </article>
+        <article class="tl-card">
+          <div class="tl-year mono-num">1989–2006</div><div class="tl-dot"></div>
+          <h4>Opakovaně mezi elitou</h4>
+          <p>Po roce 1989 až do roku 2006 klub opakovaně startuje v české extralize.</p>
+        </article>
+        <article class="tl-card">
+          <div class="tl-year mono-num">2007</div><div class="tl-dot"></div>
+          <h4>TK Slavia Plzeň</h4>
+          <p>Klub přijímá název TK Slavia Plzeň, který nese dodnes.</p>
+        </article>
+        <article class="tl-card">
+          <div class="tl-year mono-num">2017</div><div class="tl-dot"></div>
+          <h4>Vzniká akademie</h4>
+          <p>Zakládá se Nadační fond Plzeňské regionální tenisové akademie. Podporují ho město Plzeň,
+             Plzeňský kraj, Český tenisový svaz a klub.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="names reveal">
+      <div><b>1953–57</b><span>DSO Slavia</span></div>
+      <div><b>1957–90</b><span>Tenisový oddíl Slavia VŠ</span></div>
+      <div><b>1990–93</b><span>Tenisový klub Slavia VŠ</span></div>
+      <div><b>1993–2007</b><span>TK Slavia Pilsner Urquell</span></div>
+      <div><b>od 2007</b><span>TK Slavia Plzeň</span></div>
+    </div>
+
+    <div class="teams reveal">
+      <span class="eyebrow">Družstva v soutěžích</span>
+      <h3 class="title disp" style="font-size:clamp(1.3rem,3vw,2rem)">Pět týmů<br>na kurtech</h3>
+      <div class="teams-grid">
+        <div class="tbadge"><b>1. liga</b><span>Dospělí</span></div>
+        <div class="tbadge"><b>2. liga</b><span>Dospělí</span></div>
+        <div class="tbadge"><b>Dorost</b><span>Mládež</span></div>
+        <div class="tbadge"><b>Starší žáci</b><span>Mládež</span></div>
+        <div class="tbadge"><b>Mladší žáci</b><span>Mládež</span></div>
+      </div>
+      <p class="teams-note">Aktuální rozlosování a výsledky družstev najdete na
+        <a href="https://cztenis.cz" target="_blank" rel="noopener">cztenis.cz</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ODCHOVANCI ============ -->
+<section class="sec alumni" id="odchovanci">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Odchovankyně a jména klubu</span>
+      <h2 class="title disp">Prošly tudy</h2>
+      <p class="lead">Hráčky spojené s TK Slavia Plzeň — a turnaj, kterým prošly pozdější světové jedničky.</p>
+    </div>
+
+    <div class="al-list">
+      <article class="al reveal">
+        <span class="bar"></span>
+        <div class="al-body">
+          <h3 class="al-name">Barbora Strýcová</h3>
+          <p class="al-desc">Trénovala v klubu, v patnácti letech přestoupila do Sparty Praha.</p>
+        </div>
+        <span class="al-tag">Trénovala zde</span>
+      </article>
+      <article class="al reveal d1">
+        <span class="bar"></span>
+        <div class="al-body">
+          <h3 class="al-name">Andrea Sestini Hlaváčková</h3>
+          <p class="al-desc">Olympijská medailistka. Na letních kempech trénuje s dětmi.</p>
+        </div>
+        <span class="al-tag">Na kempech</span>
+      </article>
+      <article class="al reveal d2">
+        <span class="bar"></span>
+        <div class="al-body">
+          <h3 class="al-name">Eva Birnerová</h3>
+          <p class="al-desc">Jméno spojené s TK Slavia Plzeň.</p>
+        </div>
+        <span class="al-tag">Jméno klubu</span>
+      </article>
+    </div>
+
+    <div class="expilsen reveal">
+      <div>
+        <span class="eyebrow on-dark">Juniorský turnaj</span>
+        <h3>Ex Pilsen</h3>
+        <p>První ročník se hrál v roce 1971 a vyhráli ho Maďar János Benyik a Češka Renáta Tomanová.
+           Turnaj se později stal součástí juniorského okruhu ITF a prošly jím i pozdější světové jedničky.</p>
+      </div>
+      <div class="ep-facts">
+        <div class="ep-f"><b>1971</b><span>první ročník turnaje</span></div>
+        <div class="ep-f"><b>ITF junior</b><span>součást juniorského okruhu</span></div>
+        <div class="ep-f"><b>Lleyton Hewitt</b><span>pozdější světová jednička</span></div>
+        <div class="ep-f"><b>Maria Šarapovová</b><span>vítězka 2001, prošla z kvalifikace</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. AKADEMIE ============ -->
+<section class="sec" id="akademie">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Plzeňská regionální tenisová akademie</span>
+      <h2 class="title disp">Akademie</h2>
+      <p class="lead">Nadační fond Plzeňské regionální tenisové akademie vznikl v roce 2017. Podporuje ho město Plzeň,
+        Plzeňský kraj, Český tenisový svaz a klub. Zázemí: 12 venkovních kurtů, 6 krytých, 2 kryté prostory pro přípravu
+        mimo kurt, fyzioterapie a klubový bazén.</p>
+    </div>
+
+    <div class="prog-grid">
+      <article class="prog reveal">
+        <div class="prog-n mono-num">01</div>
+        <span class="age">MŠ a první ročníky ZŠ</span>
+        <h3>Školní akademie</h3>
+        <p>Nejmenší děti z mateřských škol a prvních ročníků základních škol. Popularizace tenisu
+           a hledání talentů, kroužky pro základní školy, kurzy od 4 let.</p>
+        <div class="lead-by">Vedoucí programu: <b>Jana Hollerová</b></div>
+      </article>
+      <article class="prog reveal d1">
+        <div class="prog-n mono-num">02</div>
+        <span class="age">5–9 let</span>
+        <h3>Předzávodní akademie</h3>
+        <p>Děti, které už soutěží v Babytenisu a Minitenisu. Tenisový trénink, kondiční příprava
+           a soustředění.</p>
+        <div class="lead-by">Babytenis · Minitenis · soustředění</div>
+      </article>
+      <article class="prog reveal d2">
+        <div class="prog-n mono-num">03</div>
+        <span class="age">od 8 let</span>
+        <h3>Závodní akademie</h3>
+        <p>Program směřující k vrcholovému tenisu. Hráči jsou rozděleni do výkonnostních skupin,
+           součástí přípravy je fyzioterapie.</p>
+        <div class="grp"><span>A+</span><span>A</span><span>B</span><span>C</span><span>D</span></div>
+        <div class="lead-by">Vedoucí programu: <b>Mgr. Jiří Kovářík</b></div>
+      </article>
+    </div>
+
+    <div class="aka-nums reveal">
+      <div><b class="mono-num">18</b><span>trenérů</span></div>
+      <div><b class="mono-num">75</b><span>hráčů 5–10 let</span></div>
+      <div><b class="mono-num">42</b><span>hráčů 11–18 let</span></div>
+      <div><b class="mono-num">12</b><span>hráčů 18–25 let</span></div>
+    </div>
+    <p style="font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.9rem">Čísla za rok 2024</p>
+
+    <div class="camps reveal">
+      <div>
+        <span class="eyebrow on-dark">Letní kempy 2026</span>
+        <h3>Týden tenisu<br>s Andreou Sestini Hlaváčkovou</h3>
+        <p>Letní kempy vede i olympijská medailistka Andrea Sestini Hlaváčková.</p>
+        <div class="camp-price">
+          <div><b>5 000 Kč</b><span>týden</span></div>
+          <div><b>300 Kč</b><span>přespání / noc</span></div>
+        </div>
+      </div>
+      <div class="camp-dates">
+        <div class="camp-d"><b>6.–10. 7. 2026</b><span>1. kemp</span></div>
+        <div class="camp-d"><b>24.–28. 8. 2026</b><span>2. kemp</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. TRENÉŘI ============ -->
+<section class="sec" id="treneri" style="background:var(--gray)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Trenérský tým</span>
+      <h2 class="title disp">Trenéři</h2>
+      <p class="lead">V akademii pracuje tým osmnácti trenérů. Níže najdete kontaktní osoby pro nábor a zařazení do skupin.</p>
+    </div>
+
+    <div class="coach-grid">
+      <article class="coach reveal">
+        <div class="coach-ph"><span class="mono">JH</span><span class="ball"></span></div>
+        <div class="coach-b">
+          <h3>Jana Hollerová</h3>
+          <div class="coach-role">Vedoucí Školní akademie</div>
+          <p>Bývalá juniorská reprezentantka. Vede program Tenis dětem a Školní akademii — první kroky na kurtu.</p>
+          <div class="coach-c">
+            <a href="mailto:hollerova@tkslaviaplzen.cz">hollerova@tkslaviaplzen.cz</a>
+            <a href="tel:+420603164722">603 164 722</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="coach reveal d1">
+        <div class="coach-ph"><span class="mono">JK</span><span class="ball"></span></div>
+        <div class="coach-b">
+          <h3>Mgr. Jiří Kovářík</h3>
+          <div class="coach-role">Manažer akademie</div>
+          <p>Manažer akademie a vedoucí Závodní akademie, jejíž hráči trénují ve skupinách A+ až D.</p>
+          <div class="coach-c">
+            <a href="tel:+420777007022">777 007 022</a>
+            <a href="mailto:info@tkslaviaplzen.cz">info@tkslaviaplzen.cz</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="coach tile reveal d2">
+        <b class="mono-num">18</b>
+        <span>trenérů akademie</span>
+        <p>Kompletní trenérský tým akademie napříč programy od Školní přes Předzávodní až po Závodní akademii.</p>
+      </article>
+
+      <article class="coach open-card reveal d3">
+        <div class="coach-b" style="padding:0">
+          <h3>Doplníme další trenéry</h3>
+          <p>Karty ostatních trenérů — jméno, specializace, kontakt a fotografie — doplníme podle podkladů z klubu.
+             Napište nám, koho chcete na webu představit.</p>
+          <div class="coach-c"><a href="mailto:info@tkslaviaplzen.cz">info@tkslaviaplzen.cz</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="vedeni reveal">
+      <h3>Vedení klubu</h3>
+      <div class="ved-grid">
+        <div class="ved"><b>Ing. Jan Hlaváček</b><span>Předseda</span></div>
+        <div class="ved"><b>Mgr. Jiří Kovářík ml.</b><span>Místopředseda a manažer</span></div>
+        <div class="ved"><b>Ing. Mario Junek</b><span>Ekonom a pokladník</span></div>
+        <div class="ved"><b>Ing. František Steiner</b><span>Člen výboru</span></div>
+        <div class="ved"><b>Mgr. Jiří Kovářík</b><span>Rekreační tenis</span></div>
+        <div class="ved rev"><b>Jitka Szafnerová</b><span>Předsedkyně revizní rady</span></div>
+        <div class="ved rev"><b>Milan Ungr</b><span>Revizní rada</span></div>
+        <div class="ved rev"><b>Ing. Josef Eliášek</b><span>Revizní rada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. PŘIHLÁŠKA ============ -->
+<section class="sec apply" id="prihlaska">
+  <div class="wrap">
+    <div class="sec-head on-dark">
+      <span class="eyebrow on-dark">Staňte se členem</span>
+      <h2 class="title disp" style="color:#fff">Přihláška<br>do klubu</h2>
+      <p class="lead">Ve třech krocích vyberete typ členství, doplníte údaje a odešlete přihlášku.
+        Ozveme se vám z adresy info@tkslaviaplzen.cz.</p>
+    </div>
+
+    <div class="form-shell reveal">
+      <div class="steps" id="steps">
+        <div class="step-i active" data-s="0"><span class="no">1</span><span class="lb">Typ členství</span></div>
+        <span class="step-line" data-l="0"></span>
+        <div class="step-i" data-s="1"><span class="no">2</span><span class="lb">Osobní údaje</span></div>
+        <span class="step-line" data-l="1"></span>
+        <div class="step-i" data-s="2"><span class="no">3</span><span class="lb">Shrnutí a odeslání</span></div>
+      </div>
+
+      <form id="regForm" novalidate>
+        <!-- KROK 1 -->
+        <div class="fstep on" data-step="0">
+          <h3>1. Vyberte typ členství</h3>
+          <p class="fs-note">Roční členské příspěvky podle věku. Ceny odpovídají platnému ceníku klubu.</p>
+          <div class="mem-grid" id="memGrid">
+            <button type="button" class="mem" aria-pressed="false" data-name="Do 10 let" data-price="1 200 Kč" data-child="1">
+              <b>Do 10 let</b><span class="pr mono-num">1 200 Kč</span><span class="pn">roční příspěvek</span>
+            </button>
+            <button type="button" class="mem" aria-pressed="false" data-name="Do 14 let" data-price="1 600 Kč" data-child="1">
+              <b>Do 14 let</b><span class="pr mono-num">1 600 Kč</span><span class="pn">roční příspěvek</span>
+            </button>
+            <button type="button" class="mem" aria-pressed="false" data-name="Do 18 let" data-price="2 200 Kč" data-child="1">
+              <b>Do 18 let</b><span class="pr mono-num">2 200 Kč</span><span class="pn">roční příspěvek</span>
+            </button>
+            <button type="button" class="mem" aria-pressed="false" data-name="Nad 18 let" data-price="2 700 Kč" data-child="0">
+              <b>Nad 18 let</b><span class="pr mono-num">2 700 Kč</span><span class="pn">roční příspěvek</span>
+            </button>
+            <button type="button" class="mem" aria-pressed="false" data-name="Důchodci a studenti" data-price="2 200 Kč" data-child="0">
+              <b>Důchodci a studenti</b><span class="pr mono-num">2 200 Kč</span><span class="pn">roční příspěvek</span>
+            </button>
+            <button type="button" class="mem" aria-pressed="false" data-name="Nehrající člen" data-price="1 000 Kč" data-child="0">
+              <b>Nehrající člen</b><span class="pr mono-num">1 000 Kč</span><span class="pn">roční příspěvek</span>
+            </button>
+          </div>
+          <p class="msg" id="memMsg" style="display:none;color:#B23A3A;font-size:.8rem;margin-top:.9rem">Vyberte prosím typ členství.</p>
+          <div class="f-nav">
+            <button type="button" class="btn btn-green" data-next="1">Pokračovat na údaje</button>
+          </div>
+        </div>
+
+        <!-- KROK 2 -->
+        <div class="fstep" data-step="1">
+          <h3>2. Osobní údaje</h3>
+          <p class="fs-note">Údaje slouží k evidenci členství a ke komunikaci s klubem.</p>
+          <div class="fgrid">
+            <div class="field"><label for="fn">Jméno <span class="req">*</span></label>
+              <input id="fn" name="fn" type="text" autocomplete="given-name" data-req><span class="msg">Vyplňte jméno.</span></div>
+            <div class="field"><label for="ln">Příjmení <span class="req">*</span></label>
+              <input id="ln" name="ln" type="text" autocomplete="family-name" data-req><span class="msg">Vyplňte příjmení.</span></div>
+            <div class="field"><label for="bd">Datum narození <span class="req">*</span></label>
+              <input id="bd" name="bd" type="date" data-req><span class="msg">Vyplňte datum narození.</span></div>
+            <div class="field"><label for="em">E-mail <span class="req">*</span></label>
+              <input id="em" name="em" type="email" autocomplete="email" placeholder="jmeno@email.cz" data-req data-mail><span class="msg">Zadejte platný e-mail.</span></div>
+            <div class="field"><label for="ph">Telefon <span class="req">*</span></label>
+              <input id="ph" name="ph" type="tel" autocomplete="tel" placeholder="+420" data-req><span class="msg">Vyplňte telefon.</span></div>
+            <div class="field"><label for="ad">Ulice a číslo popisné <span class="req">*</span></label>
+              <input id="ad" name="ad" type="text" autocomplete="street-address" data-req><span class="msg">Vyplňte adresu.</span></div>
+            <div class="field"><label for="ci">Město <span class="req">*</span></label>
+              <input id="ci" name="ci" type="text" autocomplete="address-level2" value="Plzeň" data-req><span class="msg">Vyplňte město.</span></div>
+            <div class="field"><label for="zp">PSČ <span class="req">*</span></label>
+              <input id="zp" name="zp" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="301 00" data-req><span class="msg">Vyplňte PSČ.</span></div>
+          </div>
+
+          <div class="guard" id="guard">
+            <h4>Zákonný zástupce</h4>
+            <div class="fgrid">
+              <div class="field"><label for="gn">Jméno a příjmení zástupce <span class="req">*</span></label>
+                <input id="gn" name="gn" type="text" data-greq><span class="msg">Vyplňte jméno zákonného zástupce.</span></div>
+              <div class="field"><label for="gp">Telefon zástupce <span class="req">*</span></label>
+                <input id="gp" name="gp" type="tel" data-greq><span class="msg">Vyplňte telefon zástupce.</span></div>
+              <div class="field full"><label for="ge">E-mail zástupce <span class="req">*</span></label>
+                <input id="ge" name="ge" type="email" data-greq data-mail><span class="msg">Zadejte platný e-mail zástupce.</span></div>
+            </div>
+          </div>
+
+          <div class="field full" style="margin-top:1.3rem">
+            <label>Herní úroveň</label>
+            <div class="levels">
+              <label><input type="radio" name="lvl" value="Začátečník" checked> Začátečník</label>
+              <label><input type="radio" name="lvl" value="Rekreační"> Rekreační</label>
+              <label><input type="radio" name="lvl" value="Závodní"> Závodní</label>
+            </div>
+          </div>
+
+          <div class="field full" style="margin-top:1.1rem">
+            <label for="nt">Poznámka</label>
+            <textarea id="nt" name="nt" placeholder="Preferovaný čas tréninků, dosavadní zkušenosti, dotazy…"></textarea>
+          </div>
+
+          <div class="f-nav">
+            <button type="button" class="btn btn-line" data-prev="0">Zpět</button>
+            <button type="button" class="btn btn-green" data-next="2">Pokračovat na shrnutí</button>
+          </div>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="fstep" data-step="2">
+          <h3>3. Shrnutí a odeslání</h3>
+          <p class="fs-note">Zkontrolujte údaje, potvrďte souhlasy a odešlete přihlášku.</p>
+          <div class="sum">
+            <div class="sum-h">
+              <b id="sumMem">—</b>
+              <span class="p mono-num" id="sumPrice">—</span>
+            </div>
+            <div class="sum-rows">
+              <div><span>Jméno a příjmení</span><b id="sumName">—</b></div>
+              <div><span>Datum narození</span><b id="sumBd">—</b></div>
+              <div><span>E-mail</span><b id="sumMail">—</b></div>
+              <div><span>Telefon</span><b id="sumPhone">—</b></div>
+              <div><span>Adresa</span><b id="sumAddr">—</b></div>
+              <div><span>Herní úroveň</span><b id="sumLvl">—</b></div>
+              <div id="sumGuardWrap" style="display:none"><span>Zákonný zástupce</span><b id="sumGuard">—</b></div>
+              <div><span>Poznámka</span><b id="sumNote">—</b></div>
+            </div>
+          </div>
+          <div class="checks">
+            <label class="chk" id="chk1w"><input type="checkbox" id="chk1">
+              <span>Souhlasím s hracím řádem a stanovami TK Slavia Plzeň z.s.</span></label>
+            <label class="chk" id="chk2w"><input type="checkbox" id="chk2">
+              <span>Souhlasím se zpracováním osobních údajů pro účely evidence členství (GDPR).</span></label>
+          </div>
+          <div class="f-nav">
+            <button type="button" class="btn btn-line" data-prev="1">Zpět</button>
+            <button type="submit" class="btn btn-green">Odeslat přihlášku</button>
+          </div>
+        </div>
+        <p style="margin-top:1.2rem;font-size:.8rem;color:var(--muted);text-align:center">Ukázkový formulář návrhu — údaje se nikam neodesílají.</p>
+      </form>
+
+      <div class="thanks" id="thanks">
+        <div class="ok">✓</div>
+        <h3>Přihláška odeslána</h3>
+        <p>Děkujeme. Ozveme se vám na uvedený e-mail a domluvíme další kroky.
+           Toto je ukázkový formulář — data se nikam neodesílají.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. CENÍK ============ -->
+<section class="sec" id="cenik">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Ceník</span>
+      <h2 class="title disp">Ceny a členství</h2>
+      <p class="lead">Pronájem dvorců v zimní i letní sezóně a roční členské příspěvky. Ceny jsou uvedeny v Kč.</p>
+    </div>
+
+    <div class="pills" role="tablist" aria-label="Ceníky">
+      <button class="pill" role="tab" aria-selected="true" data-panel="zima">Zimní sezóna</button>
+      <button class="pill" role="tab" aria-selected="false" data-panel="leto">Letní sezóna</button>
+      <button class="pill" role="tab" aria-selected="false" data-panel="clen">Členské příspěvky</button>
+    </div>
+
+    <!-- ZIMA -->
+    <div class="pricepanel on" id="p-zima" role="tabpanel">
+      <div class="p-eyebrow">Pronájem dvorců · hala</div>
+      <h2>Zimní sezóna 2025/26</h2>
+      <div class="p-note"><b>Cena / cena pro člena.</b> Sazby platí za jeden dvorec a hodinu.
+        Nafukovací haly mají vlastní sazbu; v sobotu, v neděli a o svátcích jsou bez topení.</div>
+
+      <div class="p-sec">
+        <h3>Pondělí – pátek</h3>
+        <table class="ptable">
+          <thead><tr><th>Prostor</th><th>Čas</th><th class="num">Cena</th><th class="num">Člen</th></tr></thead>
+          <tbody>
+            <tr><td class="nm">Pevná hala</td><td class="meta">6–8 h a 21–23 h</td><td class="pr num">400 Kč</td><td class="mb num" data-l="Člen">340 Kč</td></tr>
+            <tr><td class="nm">Nafukovací haly</td><td class="meta">6–8 h a 21–23 h</td><td class="pr num">350 Kč</td><td class="mb num" data-l="Člen">290 Kč</td></tr>
+            <tr><td class="nm">Pevná hala</td><td class="meta">8–13 h</td><td class="pr num">490 Kč</td><td class="mb num" data-l="Člen">430 Kč</td></tr>
+            <tr><td class="nm">Nafukovací haly</td><td class="meta">8–13 h</td><td class="pr num">440 Kč</td><td class="mb num" data-l="Člen">380 Kč</td></tr>
+            <tr><td class="nm">Pevná hala</td><td class="meta">13–21 h</td><td class="pr num">600 Kč</td><td class="mb num" data-l="Člen">540 Kč</td></tr>
+            <tr><td class="nm">Nafukovací haly</td><td class="meta">13–21 h</td><td class="pr num">540 Kč</td><td class="mb num" data-l="Člen">480 Kč</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-sec">
+        <h3>Sobota, neděle, svátky</h3>
+        <table class="ptable">
+          <thead><tr><th>Prostor</th><th>Čas</th><th class="num">Cena</th><th class="num">Člen</th></tr></thead>
+          <tbody>
+            <tr><td class="nm">Pevná hala</td><td class="meta">8–21 h</td><td class="pr num">490 Kč</td><td class="mb num" data-l="Člen">430 Kč</td></tr>
+            <tr><td class="nm">Nafukovací hala bez topení</td><td class="meta">8–21 h</td><td class="pr num">300 Kč</td><td class="mb num" data-l="Člen">250 Kč</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-sec alt">
+        <h3>Akademie</h3>
+        <table class="ptable">
+          <thead><tr><th>Prostor</th><th>Čas</th><th class="num">Cena</th><th class="num">Člen</th></tr></thead>
+          <tbody>
+            <tr><td class="nm">Akademie</td><td class="meta"></td><td class="pr num">300 Kč</td><td class="mb num" data-l="Člen">250 Kč</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- LÉTO -->
+    <div class="pricepanel" id="p-leto" role="tabpanel">
+      <div class="p-eyebrow">Pronájem dvorců · antuka</div>
+      <h2>Letní sezóna</h2>
+      <div class="p-note"><b>Venkovní antukové dvorce.</b> Členové s online přístupem (PIN) rezervují dvorce
+        v systému rogeronline.cz.</div>
+
+      <div class="p-sec">
+        <h3>Venkovní antuka</h3>
+        <table class="ptable">
+          <thead><tr><th>Kdo hraje</th><th>Podmínka</th><th class="num">Cena</th></tr></thead>
+          <tbody>
+            <tr><td class="nm">Člen bez kódu</td><td class="meta">za dvorec</td><td class="pr num">170 Kč</td></tr>
+            <tr><td class="nm">Host</td><td class="meta">za dvorec</td><td class="pr num">250 Kč</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-sec alt">
+        <h3>Nepříznivé počasí</h3>
+        <table class="ptable">
+          <thead><tr><th>Prostor</th><th>Podmínka</th><th class="num">Cena</th></tr></thead>
+          <tbody>
+            <tr><td class="nm">Pevná hala</td><td class="meta">při nepříznivém počasí</td><td class="pr num">400 Kč / hod</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ČLENSTVÍ -->
+    <div class="pricepanel" id="p-clen" role="tabpanel">
+      <div class="p-eyebrow">Členství v klubu</div>
+      <h2>Roční členské příspěvky</h2>
+      <div class="p-note"><b>Příspěvky se platí na rok.</b> Kategorie se určuje podle věku hráče.
+        Přihlásit se můžete přes <a href="#prihlaska" style="color:var(--green);font-weight:600">formulář přihlášky</a>.</div>
+
+      <div class="p-sec">
+        <h3>Podle věku a kategorie</h3>
+        <table class="ptable">
+          <thead><tr><th>Kategorie</th><th>Poznámka</th><th class="num">Cena</th></tr></thead>
+          <tbody>
+            <tr><td class="nm">Do 10 let</td><td class="meta">děti</td><td class="pr num">1 200 Kč</td></tr>
+            <tr><td class="nm">Do 14 let</td><td class="meta">mládež</td><td class="pr num">1 600 Kč</td></tr>
+            <tr><td class="nm">Do 18 let</td><td class="meta">mládež</td><td class="pr num">2 200 Kč</td></tr>
+            <tr><td class="nm">Nad 18 let</td><td class="meta">dospělí</td><td class="pr num">2 700 Kč</td></tr>
+            <tr><td class="nm">Důchodci a studenti</td><td class="meta">zvýhodněná kategorie</td><td class="pr num">2 200 Kč</td></tr>
+            <tr><td class="nm">Online přístup (PIN)</td><td class="meta">rezervace v systému</td><td class="pr num">1 800 Kč</td></tr>
+            <tr><td class="nm">Nehrající člen</td><td class="meta">bez hraní</td><td class="pr num">1 000 Kč</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-sec alt">
+        <h3>Skříňky</h3>
+        <table class="ptable">
+          <thead><tr><th>Typ</th><th>Poznámka</th><th class="num">Cena</th></tr></thead>
+          <tbody>
+            <tr><td class="nm">Malá skříňka</td><td class="meta">roční poplatek</td><td class="pr num">180 Kč</td></tr>
+            <tr><td class="nm">Velká skříňka</td><td class="meta">roční poplatek</td><td class="pr num">350 Kč</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="price-cta">
+      <a href="#prihlaska" class="btn btn-green">Přihláška do klubu</a>
+      <a href="https://www.rogeronline.cz/v2/?klub=103" target="_blank" rel="noopener" class="btn btn-line">Rezervace kurtů</a>
+      <p>Dotazy k ceníku: <a href="mailto:info@tkslaviaplzen.cz" style="color:var(--green);font-weight:600">info@tkslaviaplzen.cz</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. AREÁL ============ -->
+<section class="sec areal" id="areal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Borský park, Plzeň</span>
+      <h2 class="title disp">Areál klubu</h2>
+      <p class="lead">Tenis, sporty kolem něj i zázemí pro přípravu a regeneraci — všechno v jednom areálu.</p>
+    </div>
+
+    <div class="ar-grid">
+      <article class="ar reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M4.5 6c3.5 3 3.5 9 0 12M19.5 6c-3.5 3-3.5 9 0 12"/></svg></div>
+        <b><span class="big mono-num">17</span></b>
+        <b>Venkovních dvorců</b>
+        <span>Antukové kurty pro letní sezónu, tréninky akademie i ligová utkání.</span>
+      </article>
+      <article class="ar reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7v9H3z"/><path d="M3 15h18"/></svg></div>
+        <b><span class="big mono-num">6</span></b>
+        <b>Krytých dvorců</b>
+        <span>Pevná hala a nafukovací haly — tenis po celý rok.</span>
+      </article>
+      <article class="ar reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14M3 12h18"/></svg></div>
+        <b>Další hřiště</b>
+        <span>3 hřiště s umělým povrchem (házená, futsal), 4 volejbalové kurty (volejbal, nohejbal),
+          plážový volejbal a minigolf.</span>
+      </article>
+      <article class="ar reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 5v14M6 12h12M3 9v6M21 9v6"/></svg></div>
+        <b>Příprava mimo kurt</b>
+        <span>2 kryté prostory pro kondiční a herní přípravu.</span>
+      </article>
+      <article class="ar reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-9.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 7 3.5C19 16.5 12 21 12 21Z"/></svg></div>
+        <b>Fyzioterapie</b>
+        <span>Součást přípravy hráčů Závodní akademie i zázemí pro členy klubu.</span>
+      </article>
+      <article class="ar reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 16c2-1.5 3.5-1.5 5.5 0S13 17.5 15 16s3-1.5 5 0M3 11c2-1.5 3.5-1.5 5.5 0S13 12.5 15 11s3-1.5 5 0"/></svg></div>
+        <b>Klubový bazén</b>
+        <span>Regenerace přímo v areálu klubu.</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. KONTAKT ============ -->
+<section class="sec" id="kontakt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Kontakt</span>
+      <h2 class="title disp">Ozvěte se nám</h2>
+    </div>
+
+    <div class="ct-grid">
+      <div>
+        <div class="ct-block">
+          <div class="lb">Adresa</div>
+          <div class="vl"><b>TK Slavia Plzeň z.s.</b><br>U Borského parku 2916/19<br>301 00 Plzeň</div>
+        </div>
+
+        <div class="ct-block">
+          <div class="lb">E-mail</div>
+          <div class="vl">
+            <a href="mailto:info@tkslaviaplzen.cz">info@tkslaviaplzen.cz</a><br>
+            <a href="mailto:hollerova@tkslaviaplzen.cz">hollerova@tkslaviaplzen.cz</a> — akademie
+          </div>
+        </div>
+
+        <div class="ct-block">
+          <div class="lb">Lidé a telefony</div>
+          <div class="ct-p">
+            <div><b>Jana Hollerová</b><span>Akademie / Tenis dětem</span></div>
+            <a class="ph" href="tel:+420603164722">603 164 722</a>
+          </div>
+          <div class="ct-p">
+            <div><b>Mgr. Jiří Kovářík</b><span>Manažer akademie</span></div>
+            <a class="ph" href="tel:+420777007022">777 007 022</a>
+          </div>
+        </div>
+
+        <div class="ct-block">
+          <div class="lb">Rezervace kurtů</div>
+          <div class="vl">Systém <a href="https://www.rogeronline.cz/v2/?klub=103" target="_blank" rel="noopener">rogeronline.cz</a>,
+            klub č. <b>103</b>.</div>
+        </div>
+
+        <div class="ct-block">
+          <div class="lb">Doprava</div>
+          <div class="vl" style="font-size:.92rem;color:var(--muted)">
+            Areál leží u Borského parku na adrese U Borského parku 2916/19.
+            Aktuální spojení MHD si prosím ověřte ve vyhledávači jízdních řádů.
+          </div>
+        </div>
+
+        <div class="ct-block">
+          <div class="lb">Sociální sítě</div>
+          <div class="socials">
+            <a href="#" aria-label="Facebook TK Slavia Plzeň">Facebook</a>
+            <a href="#" aria-label="Instagram TK Slavia Plzeň">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="map reveal" role="img" aria-label="Schematická mapa: areál TK Slavia Plzeň u Borského parku">
+        <div class="park"></div>
+        <div class="road r3"></div>
+        <div class="road r1"></div>
+        <div class="road r2"></div>
+        <div class="club">
+          <i></i><i></i><i></i><i></i>
+          <i></i><i class="h"></i><i class="h"></i><i></i>
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <span class="lbl l1">Borský park</span>
+        <span class="lbl l2">U Borského parku</span>
+        <span class="lbl l3">Plzeň — Bory</span>
+        <div class="pin"><b>TK Slavia Plzeň</b><i></i></div>
+        <div class="map-cap"><b>Schematické znázornění.</b> Areál klubu u Borského parku, U Borského parku 2916/19, 301 00 Plzeň.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 14. PATIČKA ============ -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <span class="ft-brand">
+          <img src="assets/logo-tk-slavia-trim.png" alt="TK Slavia Plzeň" width="313" height="220">
+        </span>
+        <p class="ft-about">TK Slavia Plzeň z.s. — tenisový klub s tradicí od roku 1953.
+          17 antukových dvorců, 6 krytých, Plzeňská regionální tenisová akademie.</p>
+      </div>
+      <div>
+        <h4>Klub</h4>
+        <ul>
+          <li><a href="#aktuality">Aktuality</a></li>
+          <li><a href="#tradice">Tradice</a></li>
+          <li><a href="#odchovanci">Odchovanci</a></li>
+          <li><a href="#treneri">Trenéři</a></li>
+          <li><a href="#areal">Areál</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hraní</h4>
+        <ul>
+          <li><a href="#akademie">Akademie</a></li>
+          <li><a href="#cenik">Ceník</a></li>
+          <li><a href="#prihlaska">Přihláška do klubu</a></li>
+          <li><a href="https://www.rogeronline.cz/v2/?klub=103" target="_blank" rel="noopener">Rezervace kurtů</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>U Borského parku 2916/19</li>
+          <li>301 00 Plzeň</li>
+          <li><a href="mailto:info@tkslaviaplzen.cz">info@tkslaviaplzen.cz</a></li>
+          <li><a href="tel:+420603164722">603 164 722</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bar">
+      <span>© <span class="mono-num">2026</span> TK Slavia Plzeň z.s. · Návrh webu — varianta „Extraliga“</span>
+      <span class="yrs">1953 — 2026</span>
+    </div>
+  </div>
+</footer>
+
+<button class="up" id="up" aria-label="Nahoru">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 15 7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---- sticky hlavička + tlačítko nahoru ---- */
+  var hdr=document.getElementById('hdr'), up=document.getElementById('up');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    hdr.classList.toggle('scrolled', y>18);
+    up.classList.toggle('on', y>700);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  up.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  /* ---- mobilní menu ---- */
+  var burger=document.getElementById('burger'), mnav=document.getElementById('mnav'),
+      scrim=document.getElementById('scrim'), mclose=document.getElementById('mclose');
+  function setMenu(open){
+    mnav.classList.toggle('open', open);
+    scrim.classList.toggle('on', open);
+    burger.setAttribute('aria-expanded', open?'true':'false');
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ setMenu(!mnav.classList.contains('open')); });
+  mclose.addEventListener('click', function(){ setMenu(false); });
+  scrim.addEventListener('click', function(){ setMenu(false); });
+  mnav.addEventListener('click', function(e){ if(e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setMenu(false); });
+
+  /* ---- přepínač jazyka (atrapa) ---- */
+  var langs=document.querySelectorAll('.lang');
+  langs.forEach(function(b){
+    b.addEventListener('click', function(){
+      langs.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+    });
+  });
+
+  /* ---- reveal ---- */
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* ---- filtr aktualit ---- */
+  var nfBar=document.getElementById('nfBar'), newsGrid=document.getElementById('newsGrid');
+  if(nfBar && newsGrid){
+    var nfBtns=nfBar.querySelectorAll('.nf'), newsItems=newsGrid.querySelectorAll('.news');
+    nfBar.addEventListener('click', function(e){
+      var b=e.target.closest('.nf'); if(!b) return;
+      var f=b.getAttribute('data-f');
+      nfBtns.forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true' : 'false'); });
+      newsGrid.classList.toggle('filtered', f!=='*');
+      newsItems.forEach(function(it){
+        var on = (f==='*' || it.getAttribute('data-kat')===f);
+        it.hidden = !on;
+        if(on) it.classList.add('in');
+      });
+    });
+  }
+
+  /* ---- časová osa ---- */
+  var sc=document.getElementById('tlScroll');
+  function step(){ var c=sc.querySelector('.tl-card'); return c ? c.offsetWidth+18 : 300; }
+  document.getElementById('tlPrev').addEventListener('click', function(){ sc.scrollBy({left:-step(), behavior:'smooth'}); });
+  document.getElementById('tlNext').addEventListener('click', function(){ sc.scrollBy({left:step(), behavior:'smooth'}); });
+
+  /* ---- pill navigace ceníku ---- */
+  var pills=document.querySelectorAll('.pill');
+  pills.forEach(function(p){
+    p.addEventListener('click', function(){
+      pills.forEach(function(x){ x.setAttribute('aria-selected','false'); });
+      p.setAttribute('aria-selected','true');
+      document.querySelectorAll('.pricepanel').forEach(function(panel){ panel.classList.remove('on'); });
+      var t=document.getElementById('p-'+p.dataset.panel);
+      if(t) t.classList.add('on');
+    });
+  });
+
+  /* ---- formulář ---- */
+  var form=document.getElementById('regForm'),
+      fsteps=document.querySelectorAll('.fstep'),
+      stepIs=document.querySelectorAll('.step-i'),
+      stepLines=document.querySelectorAll('.step-line'),
+      guard=document.getElementById('guard'),
+      memGrid=document.getElementById('memGrid'),
+      memMsg=document.getElementById('memMsg'),
+      thanks=document.getElementById('thanks'),
+      sel=null;
+
+  function goTo(n){
+    fsteps.forEach(function(f){ f.classList.toggle('on', Number(f.dataset.step)===n); });
+    stepIs.forEach(function(s){
+      var i=Number(s.dataset.s);
+      s.classList.toggle('active', i===n);
+      s.classList.toggle('done', i<n);
+    });
+    stepLines.forEach(function(l){ l.classList.toggle('on', Number(l.dataset.l)<n); });
+    var y=document.getElementById('prihlaska').getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({top:y, behavior:'smooth'});
+  }
+
+  memGrid.addEventListener('click', function(e){
+    var b=e.target.closest('.mem'); if(!b) return;
+    memGrid.querySelectorAll('.mem').forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+    b.setAttribute('aria-pressed','true');
+    sel={name:b.dataset.name, price:b.dataset.price, child:b.dataset.child==='1'};
+    memMsg.style.display='none';
+    guard.classList.toggle('on', sel.child);
+  });
+
+  function fieldOf(i){ return i.closest('.field'); }
+  function validate(input){
+    var v=(input.value||'').trim(), ok=v.length>0;
+    if(ok && input.hasAttribute('data-mail')) ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+    fieldOf(input).classList.toggle('err', !ok);
+    return ok;
+  }
+  function validateStep2(){
+    var list=Array.prototype.slice.call(form.querySelectorAll('[data-req]'));
+    if(guard.classList.contains('on')){
+      list=list.concat(Array.prototype.slice.call(guard.querySelectorAll('[data-greq]')));
+    } else {
+      guard.querySelectorAll('[data-greq]').forEach(function(i){ fieldOf(i).classList.remove('err'); });
+    }
+    var first=null, ok=true;
+    list.forEach(function(i){ if(!validate(i)){ ok=false; if(!first) first=i; } });
+    if(first){ first.focus({preventScroll:true}); first.scrollIntoView({block:'center', behavior:'smooth'}); }
+    return ok;
+  }
+  form.querySelectorAll('input,textarea').forEach(function(i){
+    i.addEventListener('input', function(){ if(fieldOf(i) && fieldOf(i).classList.contains('err')) validate(i); });
+  });
+
+  function val(id){ var e=document.getElementById(id); return e ? (e.value||'').trim() : ''; }
+  function fillSummary(){
+    document.getElementById('sumMem').textContent = sel ? sel.name : '—';
+    document.getElementById('sumPrice').textContent = sel ? sel.price : '—';
+    document.getElementById('sumName').textContent = (val('fn')+' '+val('ln')).trim() || '—';
+    document.getElementById('sumBd').textContent = val('bd') ? val('bd').split('-').reverse().join('. ') : '—';
+    document.getElementById('sumMail').textContent = val('em') || '—';
+    document.getElementById('sumPhone').textContent = val('ph') || '—';
+    document.getElementById('sumAddr').textContent = (val('ad')+', '+val('zp')+' '+val('ci')).replace(/^,\s*/,'') || '—';
+    var lvl=form.querySelector('input[name="lvl"]:checked');
+    document.getElementById('sumLvl').textContent = lvl ? lvl.value : '—';
+    document.getElementById('sumNote').textContent = val('nt') || '—';
+    var gw=document.getElementById('sumGuardWrap');
+    if(guard.classList.contains('on')){
+      gw.style.display='';
+      document.getElementById('sumGuard').textContent = (val('gn')+' · '+val('gp')+' · '+val('ge')).trim();
+    } else { gw.style.display='none'; }
+  }
+
+  form.querySelectorAll('[data-next]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var target=Number(b.dataset.next);
+      if(target===1){
+        if(!sel){ memMsg.style.display='block'; return; }
+      }
+      if(target===2){
+        if(!validateStep2()) return;
+        fillSummary();
+      }
+      goTo(target);
+    });
+  });
+  form.querySelectorAll('[data-prev]').forEach(function(b){
+    b.addEventListener('click', function(){ goTo(Number(b.dataset.prev)); });
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var c1=document.getElementById('chk1'), c2=document.getElementById('chk2'), ok=true;
+    document.getElementById('chk1w').classList.toggle('err', !c1.checked);
+    document.getElementById('chk2w').classList.toggle('err', !c2.checked);
+    if(!c1.checked || !c2.checked) ok=false;
+    if(!sel){ goTo(0); memMsg.style.display='block'; return; }
+    if(!validateStep2()){ goTo(1); return; }
+    if(!ok) return;
+    form.style.display='none';
+    document.getElementById('steps').style.display='none';
+    thanks.classList.add('on');
+    var y=document.getElementById('prihlaska').getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({top:y, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>

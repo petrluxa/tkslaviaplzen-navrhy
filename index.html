@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TK Slavia Plzeň — návrhy nového webu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08130D;--panel:#0F2016;--line:rgba(255,255,255,.11);
+  --txt:#F2F5F0;--muted:#8D9A92;--silver:#C9D1D6;--ball:#C8DE4A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.08;font-weight:800}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+header{padding:86px 0 50px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+header::before{content:"";position:absolute;width:760px;height:760px;right:-280px;top:-380px;
+  background:radial-gradient(circle,rgba(200,222,74,.14),transparent 62%)}
+header::after{content:"";position:absolute;inset:0;opacity:.05;
+  background-image:linear-gradient(rgba(242,245,240,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(242,245,240,.8) 1px,transparent 1px);
+  background-size:100% 92px,116px 100%}
+header .wrap{position:relative;z-index:2}
+.logo-plate{display:inline-flex;align-items:center;background:#F4F6F2;border-radius:16px;
+  padding:10px 18px;margin-bottom:28px;box-shadow:0 20px 44px -26px rgba(0,0,0,.85)}
+.logo-plate img{height:74px;width:auto;display:block;object-fit:contain}
+@media(max-width:640px){.logo-plate{padding:8px 14px}.logo-plate img{height:52px}}
+.eyebrow{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ball);font-weight:700}
+header h1{font-size:clamp(32px,5.2vw,60px);margin:20px 0 18px;padding-top:.06em}
+header h1 em{font-style:italic;color:var(--ball)}
+header p{color:var(--muted);max-width:660px;font-size:16.5px}
+.meta{display:flex;gap:14px 30px;margin-top:32px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.meta b{color:var(--txt);font-weight:600}
+
+main{padding:60px 0 90px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.35s}
+.card:hover{transform:translateY(-7px);border-color:rgba(200,222,74,.45);box-shadow:0 42px 74px -48px #000}
+.thumb{height:200px;position:relative;overflow:hidden;display:grid;place-items:center}
+.t1{background:linear-gradient(155deg,#16301F,#08130D)}
+.t2{background:linear-gradient(155deg,#F2EDE1,#DED6C2)}
+.t3{background:linear-gradient(155deg,#F2F4F1,#D7DED8)}
+.thumb::before{content:"";position:absolute;inset:0;opacity:.2;
+  background-image:linear-gradient(rgba(255,255,255,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.7) 1px,transparent 1px);
+  background-size:100% 46px,58px 100%}
+.t4{background:radial-gradient(70% 90% at 82% 8%,rgba(200,222,74,.55),transparent 66%),linear-gradient(155deg,#FFFFFF,#E3EBE2)}
+.t2::before,.t3::before,.t4::before{background-image:linear-gradient(rgba(20,10,12,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(20,10,12,.28) 1px,transparent 1px)}
+.thumb b{position:relative;font-family:'Playfair Display',serif;font-size:44px;font-weight:800}
+.t1 b{color:var(--silver)}.t2 b{color:#C4552F}.t3 b{color:#1E6B45}
+.t4 b{font-style:italic;font-weight:800;color:#14301F}
+.badge{position:absolute;top:14px;left:14px;z-index:2;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  background:#14301F;color:var(--ball);border-radius:100px;padding:5px 11px}
+.card-b{padding:26px;flex:1;display:flex;flex-direction:column}
+.card-b .num{font-size:11.5px;letter-spacing:.2em;color:var(--muted);font-weight:700;text-transform:uppercase}
+.card-b h3{font-size:25px;margin:10px 0 10px;font-weight:800}
+.card-b p{font-size:14.5px;color:var(--muted)}
+.swatches{display:flex;gap:7px;margin-top:20px}
+.sw{width:26px;height:26px;border-radius:8px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.tag{font-size:11px;padding:6px 11px;border-radius:100px;background:rgba(255,255,255,.06);color:#B3BEB7}
+.open{margin-top:auto;padding-top:22px;font-size:13.5px;font-weight:600;color:var(--ball)}
+
+.panel{margin-top:56px;border:1px solid var(--line);border-radius:18px;padding:30px 32px;background:var(--panel)}
+.panel h2{font-size:21px;margin-bottom:16px;font-weight:800}
+.panel ul{margin:0;padding-left:20px;color:var(--muted);font-size:14.5px}
+.panel li{margin-bottom:10px}
+.panel li b{color:var(--txt);font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.new{border:1px solid rgba(200,222,74,.3);background:rgba(200,222,74,.06);border-radius:18px;padding:26px 28px}
+.new h3{font-size:18px;margin-bottom:12px;color:var(--ball);font-weight:800}
+.new p{font-size:14.5px;color:#BDC7C0}
+
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:#617066}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+@media(max-width:640px){.cards{grid-template-columns:1fr}header{padding:56px 0 36px}.wrap{padding:0 20px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo-plate"><img src="assets/logo-tk-slavia-trim.png" alt="TK Slavia Plzeň" width="313" height="220"></div>
+    <div class="eyebrow">Návrhy nového webu · od roku 1953</div>
+    <h1>TK Slavia <em>Plzeň</em></h1>
+    <p>Čtyři směry pro nový web tenisového klubu z Borského parku. Každá varianta je
+       plnohodnotná jednostránka se stejným obsahem — liší se jazykem, barevností a náladou.
+       Čtvrtá vznikla na přání klubu: rozložení Kroniky ve světlých klubových barvách.
+       Klikni na kartu a projdi si ji celou včetně mobilní verze.</p>
+    <div class="meta">
+      <span>Klient: <b>TK Slavia Plzeň z.s.</b></span>
+      <span>Současný web: <b>tkslaviaplzen.cz</b></span>
+      <span>Zadání: <b>luxusní · živé · velká tradice</b></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="cards">
+      <a class="card" href="01-kronika.html">
+        <div class="thumb t1"><b>01</b></div>
+        <div class="card-b">
+          <div class="num">Varianta 01</div>
+          <h3>Kronika</h3>
+          <p>Tmavá klubová zeleň s kartáčovaným stříbrem a tenisově žlutým akcentem, serifová
+             typografie. Těžiště na sedmdesáti letech tradice — velká časová osa a zeď odchovanců.</p>
+          <div class="swatches">
+            <span class="sw" style="background:#08130D"></span>
+            <span class="sw" style="background:#1D4430"></span>
+            <span class="sw" style="background:#C9D1D6"></span>
+            <span class="sw" style="background:#C8DE4A"></span>
+          </div>
+          <div class="tags"><span class="tag">Nejluxusnější</span><span class="tag">Dark</span><span class="tag">Tradice</span></div>
+          <div class="open">Otevřít návrh →</div>
+        </div>
+      </a>
+
+      <a class="card" href="02-antuka.html">
+        <div class="thumb t2"><b>02</b></div>
+        <div class="card-b">
+          <div class="num">Varianta 02</div>
+          <h3>Antuka</h3>
+          <p>Světlá magazínová varianta — krémová, antuková terakota a klubová zeleň z loga.
+             Luxus dělá prostor a jemné linky, ne tma.</p>
+          <div class="swatches">
+            <span class="sw" style="background:#F7F4EC"></span>
+            <span class="sw" style="background:#1D4430"></span>
+            <span class="sw" style="background:#C4552F"></span>
+            <span class="sw" style="background:#C8DE4A"></span>
+          </div>
+          <div class="tags"><span class="tag">Editorial</span><span class="tag">Light</span><span class="tag">Pro fotky</span></div>
+          <div class="open">Otevřít návrh →</div>
+        </div>
+      </a>
+
+      <a class="card" href="03-extraliga.html">
+        <div class="thumb t3"><b>03</b></div>
+        <div class="card-b">
+          <div class="num">Varianta 03</div>
+          <h3>Extraliga</h3>
+          <p>Moderní sportovní. Bílá, hluboká klubová zeleň a tenisově žlutá jiskra, velká bloková
+             typografie, běžící pás a obří čísla. Ze všech variant nejvíc energie.</p>
+          <div class="swatches">
+            <span class="sw" style="background:#FFFFFF"></span>
+            <span class="sw" style="background:#14301F"></span>
+            <span class="sw" style="background:#1E6B45"></span>
+            <span class="sw" style="background:#C8DE4A"></span>
+          </div>
+          <div class="tags"><span class="tag">Nejživější</span><span class="tag">Light</span><span class="tag">Velká čísla</span></div>
+          <div class="open">Otevřít návrh →</div>
+        </div>
+      </a>
+
+      <a class="card" href="04-kronika-svetla.html">
+        <div class="thumb t4"><span class="badge">Nový</span><b>04</b></div>
+        <div class="card-b">
+          <div class="num">Varianta 04</div>
+          <h3>Světlá kronika</h3>
+          <p>Kronika ve světle a v barvách klubu. Rozložení, serifová typografie, časová osa
+             a medailon 1953 z varianty 01, barvy z varianty 03 — bílá, hluboká zeleň
+             a tenisově žlutá z míčku v logu.</p>
+          <div class="swatches">
+            <span class="sw" style="background:#FFFFFF"></span>
+            <span class="sw" style="background:#14301F"></span>
+            <span class="sw" style="background:#1E6B45"></span>
+            <span class="sw" style="background:#C8DE4A"></span>
+          </div>
+          <div class="tags"><span class="tag">Tradice</span><span class="tag">Light</span><span class="tag">Klubové barvy</span></div>
+          <div class="open">Otevřít návrh →</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="two">
+      <div class="new">
+        <h3>Přihláška do klubu</h3>
+        <p>Ve všech variantách je nový třídílný registrační formulář: výběr typu členství
+           s cenami z ceníku → osobní údaje (u dětských kategorií se přidá blok pro zákonného
+           zástupce) → rekapitulace a souhlasy. Zatím je to návrh chování, neodesílá se nikam.</p>
+      </div>
+      <div class="new">
+        <h3>Přehledný ceník</h3>
+        <p>Kulaté přepínače mezi ceníky, sekce s barevnou hlavičkou navazující přímo na tabulku,
+           vedlejší sloupce s časem a podmínkou, cena vpravo. Na mobilu se tabulka rozpadne
+           na bloky, aby se vešla.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Co je potřeba doplnit před ostrým nasazením</h2>
+      <ul>
+        <li><b>Fotografie.</b> Varianta 04 už má v Aktualitách fotky z webu a letáků klubu, ostatní vizuály
+            jsou zatím kreslené v CSS. Areál v Borském parku,
+            trenéři, děti z akademie a historické snímky z archivu klubu návrhy výrazně zvednou —
+            zvlášť variantu 02.</li>
+        <li><b>Trenérský tým.</b> V návrzích jsou jménem vedoucí akademie Jana Hollerová a Jiří Kovářík
+            a vedení klubu. Ostatní trenéry akademie doplníme podle aktuálního seznamu od klubu.</li>
+        <li><b>Přihláška.</b> Formulář je zatím jen návrh. Ostré nasazení znamená odesílání
+            e-mailem nebo do databáze, potvrzovací e-mail a text souhlasu se zpracováním údajů.</li>
+        <li><b>Rezervace kurtů.</b> Klub používá rezervační systém rogeronline.cz — odkazy z návrhů vedou přímo tam.
+            Jde to i vložit přímo do stránky.</li>
+        <li><b>Ceník</b> je převzatý z webu klubu (zimní sezóna 2025/26, členské příspěvky
+            2024–25). Klub mezitím vydal ceník na zimu 2026/27 — před spuštěním čísla aktualizovat.</li>
+        <li><b>Telefon na klub.</b> Současný web neuvádí hlavní číslo na recepci, jen kontakty
+            na akademii. Doplnit.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Návrhy pro TK Slavia Plzeň z.s. · 2026</div>
+</footer>
+</body>
+</html>
